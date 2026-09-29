@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Noto+Sans+Kannada:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography */
+.font-masthead {
+  font-family: 'Cinzel', Georgia, serif;
+}
+.font-headline {
+  font-family: 'Merriweather', Georgia, serif;
+}
+.font-body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.font-kannada {
+  font-family: 'Noto Sans Kannada', sans-serif;
+}
+
+/* Custom layout */
+.nav-dark-blue {
+  background-color: #0b3260;
+}
+.hover-nav-dark:hover {
+  background-color: #082548;
+}
+.brand-yellow {
+  background-color: #ffd600;
+}
+.brand-yellow:hover {
+  background-color: #f0c800;
+}
+.text-brand-yellow {
+  color: #f7cb04;
+}
+.border-subtle {
+  border-color: #e5e7eb;
+}
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

@@ -4,58 +4,12 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Gangolli News - Coastal Karnataka's Leading News Portal</title>
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <!-- Font Awesome for Editorial & Interface Icons -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<style data-purpose="typography">
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Noto+Sans+Kannada:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
-
-    .font-masthead {
-      font-family: 'Cinzel', Georgia, serif;
-    }
-    .font-headline {
-      font-family: 'Merriweather', Georgia, serif;
-    }
-    .font-body {
-      font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-    }
-    .font-kannada {
-      font-family: 'Noto Sans Kannada', sans-serif;
-    }
-  </style>
-<style data-purpose="custom-layout">
-    .nav-dark-blue {
-      background-color: #0b3260;
-    }
-    .hover-nav-dark:hover {
-      background-color: #082548;
-    }
-    .brand-yellow {
-      background-color: #ffd600;
-    }
-    .brand-yellow:hover {
-      background-color: #f0c800;
-    }
-    .text-brand-yellow {
-      color: #f7cb04;
-    }
-    .border-subtle {
-      border-color: #e5e7eb;
-    }
-    .line-clamp-2 {
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-    .line-clamp-3 {
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-  </style>
+<!-- Site styles (compiled Tailwind + custom styles) -->
+<link href="css/style.css" rel="stylesheet"/>
+<!-- Site scripts -->
+<script defer src="js/main.js"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-body antialiased selection:bg-yellow-200">
 <!-- BEGIN: TopUtilityBar -->
@@ -63,7 +17,7 @@
 <div class="max-w-[1240px] mx-auto px-4 py-1.5 flex justify-between items-center">
 <!-- Left: Timestamp -->
 <div class="flex items-center space-x-3">
-<span class="font-medium text-gray-700">Tue, 24 Sept, 2024 | 08:30pm IST</span>
+<span id="site-timestamp" class="font-medium text-gray-700">Tue, 24 Sept, 2024 | 08:30pm IST</span>
 </div>
 <!-- Right: Utility Links -->
 <div class="flex items-center space-x-4">
@@ -925,7 +879,7 @@
 </div>
 <div class="flex items-center space-x-2">
 <span>© 2024 Gangolli News Network</span>
-<span class="w-5 h-5 rounded-full bg-yellow-400 text-blue-950 font-bold flex items-center justify-center text-[10px] cursor-pointer" title="Back to top">
+<span id="back-to-top" class="w-5 h-5 rounded-full bg-yellow-400 text-blue-950 font-bold flex items-center justify-center text-[10px] cursor-pointer" title="Back to top">
 <i class="fa-solid fa-arrow-up"></i>
 </span>
 </div>
