@@ -6,8 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateTimestamp = () => {
       const now = new Date();
       const tz = { timeZone: 'Asia/Kolkata' };
-      const date = now.toLocaleDateString('en-GB', { ...tz, weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
-      const time = now.toLocaleTimeString('en-US', { ...tz, hour: '2-digit', minute: '2-digit', hour12: true }).replace(' ', '').toLowerCase();
+      const date = now.toLocaleDateString('kn-IN', { ...tz, weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+      const time = now.toLocaleTimeString('kn-IN', { ...tz, hour: '2-digit', minute: '2-digit', hour12: true });
       timestamp.textContent = `${date} | ${time} IST`;
     };
     updateTimestamp();
