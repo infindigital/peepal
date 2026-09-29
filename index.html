@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gangolli News - Coastal Karnataka's Leading News Portal</title>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Font Awesome for Editorial & Interface Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<style data-purpose="typography">
+    @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300&family=Noto+Sans+Kannada:wght@400;600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+    .font-masthead {
+      font-family: 'Cinzel', Georgia, serif;
+    }
+    .font-headline {
+      font-family: 'Merriweather', Georgia, serif;
+    }
+    .font-body {
+      font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .font-kannada {
+      font-family: 'Noto Sans Kannada', sans-serif;
+    }
+  </style>
+<style data-purpose="custom-layout">
+    .nav-dark-blue {
+      background-color: #0b3260;
+    }
+    .hover-nav-dark:hover {
+      background-color: #082548;
+    }
+    .brand-yellow {
+      background-color: #ffd600;
+    }
+    .brand-yellow:hover {
+      background-color: #f0c800;
+    }
+    .text-brand-yellow {
+      color: #f7cb04;
+    }
+    .border-subtle {
+      border-color: #e5e7eb;
+    }
+    .line-clamp-2 {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .line-clamp-3 {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-body antialiased selection:bg-yellow-200">
+<!-- BEGIN: TopUtilityBar -->
+<header class="bg-white border-b border-gray-200 text-xs text-gray-600">
+<div class="max-w-[1240px] mx-auto px-4 py-1.5 flex justify-between items-center">
+<!-- Left: Timestamp -->
+<div class="flex items-center space-x-3">
+<span class="font-medium text-gray-700">Tue, 24 Sept, 2024 | 08:30pm IST</span>
+</div>
+<!-- Right: Utility Links -->
+<div class="flex items-center space-x-4">
+<button class="flex items-center hover:text-blue-700 text-gray-700">
+<i class="fa-solid fa-magnifying-glass mr-1"></i>
+</button>
+<button class="flex items-center hover:text-blue-700 text-gray-700">
+<i class="fa-regular fa-bell mr-1"></i>
+</button>
+<button class="flex items-center hover:text-blue-700 text-gray-700">
+<i class="fa-solid fa-cloud-sun mr-1"></i>
+<span>AQI 34</span>
+</button>
+<a class="flex items-center text-gray-700 hover:text-blue-800 font-medium" href="#">
+<i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> Sign In
+        </a>
+</div>
+</div>
+</header>
+<!-- END: TopUtilityBar -->
+<!-- BEGIN: BrandMasthead -->
+<div class="bg-white py-3 border-b border-gray-200">
+<div class="max-w-[1240px] mx-auto px-4 flex justify-between items-center">
+<!-- Sections Selector -->
+<div>
+<button class="border border-blue-900 bg-white hover:bg-gray-50 text-blue-950 font-bold px-3 py-1.5 rounded text-xs inline-flex items-center">
+<i class="fa-solid fa-bars mr-1.5"></i> All sections
+        </button>
+</div>
+<!-- Main Newspaper Masthead Title -->
+<div class="text-center">
+<a class="font-masthead text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-blue-950 hover:text-blue-900" href="#">
+          Gangolli News
+        </a>
+</div>
+<!-- CTA Join Button -->
+<div>
+<a class="brand-yellow text-blue-950 font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wide inline-flex items-center shadow-sm" href="#">
+          JOIN US <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- END: BrandMasthead -->
+<!-- BEGIN: PrimaryNavigation -->
+<nav class="nav-dark-blue sticky top-0 z-50 text-white shadow-md">
+<div class="max-w-[1240px] mx-auto px-4 flex items-center justify-between overflow-x-auto scrollbar-none text-xs md:text-sm font-semibold tracking-wide">
+<div class="flex items-center whitespace-nowrap">
+<a class="py-2.5 px-3 hover-nav-dark flex items-center" href="#"><i class="fa-solid fa-house mr-1"></i> Home</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">Top News</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">Gangolli</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">Kundapura</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">Udupi</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">Bhatkal</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">Mangalore</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">Articles</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">Karnataka Politics</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">Sports</a>
+</div>
+</div>
+</nav>
+<!-- END: PrimaryNavigation -->
+<!-- BEGIN: MainContentContainer -->
+<main class="max-w-[1240px] mx-auto px-4 py-4 space-y-6">
+<!-- Top News Hero Feature -->
+<section class="bg-white p-5 rounded shadow-sm border border-gray-200">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+<!-- Category Sidebar Label -->
+<div class="md:col-span-1 hidden md:flex flex-col justify-start">
+<span class="text-xl font-headline font-bold text-gray-800 tracking-wider">News</span>
+</div>
+<!-- Lead Story Content -->
+<div class="md:col-span-6 flex flex-col justify-center pr-0 md:pr-4">
+<span class="text-xs font-bold text-red-600 uppercase tracking-wider mb-1">Karkala</span>
+<h1 class="text-2xl sm:text-3xl font-bold font-headline leading-tight text-gray-950 mb-3 hover:text-blue-900 cursor-pointer">
+            Karkala: Two Youths Drown in Suvarna River at Hermunde
+          </h1>
+<p class="text-gray-600 text-sm leading-relaxed mb-4">
+            Two young men drowned in the Suvarna River at Hermunde in Karkala taluk on Tuesday afternoon. The incident occurred while bathing in the river current.
+          </p>
+<div class="text-xs text-gray-400 font-medium">9m ago</div>
+</div>
+<!-- Featured Portraits Duo -->
+<div class="md:col-span-5 grid grid-cols-2 gap-2">
+<div class="h-64 bg-gray-200 overflow-hidden rounded">
+<img alt="Youth drowned in Hermunde" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDExvi_gGadIAYYFDVJh_EARnRvG6X7LI7hYBPcFMGGULHNBl-0QKayQJ5FQo3y5fcUn0G2rBZMOcllRDFxDSozTZGB-pyVM6PQ6AQD2vNEpG7sVe8MUC4zW0-_z91V4wrI6zsNQi3spRdqcfSP75lDQSUBs0IC6bxnd8zIL_KfWnVdajcnEH764_vChAOuQjmCQDNF94BT83Rfd0ji6etF64PgKLHv4uId8zkxTVZnpcigFpBd2_Hu"/>
+</div>
+<div class="h-64 bg-gray-200 overflow-hidden rounded">
+<img alt="Youth drowned in Hermunde" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSaTNakCuailakLdu0WayQJWGq7wPomGS0mmuEdO7hykkEei9dylE4mpyqDt8iz6pFZynRW8f5lEwiGe2Pnm_tod893pTnEYzpVqtbMZxWTStTz-ue2doBqbZ4PS1g-EoVCn_LmLx3yCXvlZSvvZiDmSwwcdQWJqp28_fCegsy6vXIMJsyPM4_zRc_Oo4sKiX_mMR4hX1NCMZ47mryz3qbMiuzH0R2FJo04H97DQGfZR-e4I6XFZvG"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Reader Support Banner -->
+<section class="bg-white border border-gray-200 rounded px-6 py-3 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+<div>
+<div class="text-[10px] uppercase font-bold text-red-600 tracking-wider">READER SUPPORTED</div>
+<div class="flex items-center space-x-2">
+<h3 class="font-headline font-bold text-base text-gray-900">Support Gangolli News</h3>
+<span class="text-xs text-gray-500 hidden md:inline">| Independent, reader-funded journalism. No shareholders, no agenda.</span>
+</div>
+</div>
+<div>
+<button class="brand-yellow text-blue-950 font-bold px-4 py-1.5 rounded-full text-xs flex items-center shadow hover:opacity-90">
+<i class="fa-solid fa-heart mr-1.5 text-xs text-yellow-800"></i> Support us
+        </button>
+</div>
+</section>
+<!-- BEGIN: GridEditorialLayout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Column 1: More Stories (Left 8 cols) -->
+<section class="lg:col-span-8 bg-white p-5 rounded shadow-sm border border-gray-200">
+<div class="flex items-center justify-between border-b pb-2 mb-4">
+<h2 class="text-lg font-bold font-headline text-gray-900">More Stories</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Featured Story Left -->
+<article class="space-y-2">
+<div class="w-full h-48 bg-slate-900 rounded overflow-hidden flex items-center justify-center text-white">
+<img alt="Applications Invited Banner" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIwqwLzhZ6hE83MPqiBfJDNioZqciUEJUNmoXBfBklCdNKg_CnU9CQPWLPj_4I1BbxECD9DgSt95bEHMaF7JOFQ8efMrcBMWjus8sIXQyL0u9-tT5pHoXk1EyczyplZ_L7bIl0EdLgJX9FDgnrkgUwGTFwVfY3DZSrVH2QywX6JSFMSYqzHyJunjaaq-ZJaSDnB4J5-ZriOKB_CgnVJch7QhUTO1PtX61KWfZcRLSXxxJJ4gi2am2c"/>
+</div>
+<span class="text-xs font-bold text-red-600 uppercase">Notices</span>
+<h3 class="font-headline font-bold text-base leading-snug text-gray-900 hover:text-blue-900">
+<a href="#">Udupi: Applications Invited for 14 Disability Schemes</a>
+</h3>
+<p class="text-xs text-gray-500">19m ago</p>
+</article>
+<!-- Featured Story Right -->
+<div class="space-y-4">
+<article class="flex gap-3 pb-3 border-b border-gray-100">
+<div class="w-28 h-20 bg-gray-200 rounded shrink-0 overflow-hidden">
+<img alt="Karnataka State Notice" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBGo_-psXzOTRaHV9lixO96n6P1hs1hcXXZf5pcXsk3_Ka-QBwS_R9gSZEyGOmeqEWCqgzbZGNiHqfLdgztaot1JYvqpPA599_qh1S9anrAMJpNqoddvLJdY_DLbuIiQAaINjGLDncAlFoUeN4szkiOe-NMjmfX__toWBhL6lej-JMHwpJpf4PoJ4IrWSt0saOtotMDp3VTRltd7pTIrtJECW0w6ds1-8qrwTNe3PBjDXeSHvaUbHG"/>
+</div>
+<div>
+<span class="text-[11px] font-bold text-red-600 uppercase">Notices</span>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900 line-clamp-2">
+<a href="#">Applications Invited for Various Schemes of Karnataka State Women's Development Corporation</a>
+</h4>
+<span class="text-[10px] text-gray-400">25m ago</span>
+</div>
+</article>
+<article class="flex gap-3">
+<div class="w-28 h-20 bg-gray-200 rounded shrink-0 overflow-hidden">
+<img alt="Raviraj HP" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRurJr9AKoh0bvQGIFOzIFmxBTa8WbUs3B_UuF8ITp4gkjLR46qZkUs7zHE2bqvYpT2qNr_nx7VUzSpI8kLGxf_OvCvp9awGCTWvrkzpor5GnhNX7FqTBWXZRFwuFNzTaZhW-9xvIxyQ_UfN1fdtRemR6kyWAZHUyBbBtVW5hQDZfROkVapM7HIUjUDGjFwQ3JqnV9LJjzQ14LK06gS7G76mWN4V42atRJQKk0wMAAnZg9XLO2vtv3"/>
+</div>
+<div>
+<span class="text-[11px] font-bold text-red-600 uppercase">Udupi</span>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900 line-clamp-2">
+<a href="#">Theatre Artist and Cultural Organizer Raviraj H. P. Chosen for Sangolli Rayanna Award</a>
+</h4>
+<span class="text-[10px] text-gray-400">31m ago</span>
+</div>
+</article>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 pt-6 border-t border-gray-200">
+<!-- Card Bottom Left -->
+<article class="flex gap-3">
+<div class="w-32 h-20 bg-gray-200 rounded shrink-0 overflow-hidden">
+<img alt="Heart Awareness Sculpture" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuQbhvyLiyrDBt_nEZU-sXC1hiUpNo727BU3JDu9k-EErf7OTQFl-cP8isEF2bYxzV_09g-mGAWe9MabW9XyvmjvwNz57NnJjflyIKhPPbd3QhRb0yiyt9DPzCDY_XqkqAntBUoqNbUVZBPxL_1Tk1HaZbX1KlZRxTqzASLZ1d_-I6Ii15sSgi2saHo82O0EWcovw_PKDZJtxZiyH_NvkuIT_IzMo4yvuOFvsaVy23YvJdC8z-pGwx"/>
+</div>
+<div>
+<span class="text-[11px] font-bold text-red-600 uppercase">Manipal</span>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900 line-clamp-2">
+<a href="#">World Heart Day: Heart Health Awareness Sculpture Unveiled at Kasturba Hospital Manipal</a>
+</h4>
+<span class="text-[10px] text-gray-400">43m ago</span>
+</div>
+</article>
+<!-- Card Bottom Right -->
+<article class="flex gap-3">
+<div class="w-32 h-20 bg-gray-200 rounded shrink-0 overflow-hidden">
+<img alt="MLA Press meet" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaid2HMtkXXcFTB7thlKuJ6GeCmjCz1magWDu6v6pzRTtnyOKU0K1Sf4dyapy4LqpdYcLYHm9inocGQg71vcrBzd5IIdzfGNHij6Vnsfesi-_wjCrhggRHqwbFUMtQOFYcXFgrWQBrvD493TL3qG1qMG0bQYPKvQNHxvq-UKD6O-Bqh8tyGcL2K3uWONBMFbMCAZS6z_6oRbd7RhdTPiw_l1jjb9hWjltM5usopuXyoID9ykuev3zl"/>
+</div>
+<div>
+<span class="text-[11px] font-bold text-red-600 uppercase">Kundapura</span>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900 line-clamp-2">
+<a href="#">Prepare to Face Impending Water Crisis in Kundapura and Byndoor, Says MLA</a>
+</h4>
+<span class="text-[10px] text-gray-400">1h ago</span>
+</div>
+</article>
+</div>
+<!-- Another Sub-row in More Stories -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4 pt-4 border-t border-gray-100">
+<article class="flex gap-3">
+<div class="w-32 h-20 bg-gray-200 rounded shrink-0 overflow-hidden">
+<img alt="Congress Delegation" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKEnI9aqeaJVTWVB4YodjIkhXNq03wqRYhcv1cU3JlaHCcoiI2DU7ghP4UjiSqTTL4l4FIe3HDk-siNmhx3OYgFYXVaDVoawj-F0pZZSH4nWljPh_GyLUzewuWah8Nb70F5SpcsTD8PIAOz4HgbTN_mKTCs8EyX5sEB2azO2xFJVIURHt8DRs9pZSPzhdhd56BlK1ZXFggPFAHDDxo4e04ss0_JpnJBdQr6wDOj9-vFK10l2VsWmXX"/>
+</div>
+<div>
+<span class="text-[11px] font-bold text-red-600 uppercase">Udupi</span>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900 line-clamp-2">
+<a href="#">Congress Urges Udupi DC to Repair Non-Functional Streetlights and High-Mast Lights</a>
+</h4>
+<span class="text-[10px] text-gray-400">45m ago</span>
+</div>
+</article>
+</div>
+</section>
+<!-- Column 2: Read More / Long Read Featured (Right 4 cols) -->
+<section class="lg:col-span-4 space-y-6">
+<!-- Read More Sidebar list -->
+<div class="bg-white p-4 rounded shadow-sm border border-gray-200">
+<h2 class="text-sm font-bold font-headline uppercase text-gray-900 border-b pb-2 mb-3">Read More</h2>
+<div class="space-y-3">
+<article class="flex gap-2">
+<img alt="thumb" class="w-16 h-12 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1qjutgKLCuCpC1wiEJtH1KvnIY5SLaGD7RkDeNuqzfB0-W-yh2W8QTO_33xvYp7mwdCIFbMLQu0JqXZBEXXARgcCRItnifgM31W2eiPt6nEYSQXWFtTsN39bd9Iixn82hJYZZfNFcYUOlAWB8WM4diQis3MsbLz8uxeJSnI8Oq5c1F0UYY_GZngH1Q8U8MOGbdw_1zmi4_lZmIjj7GY_EeXVm90xUbj4Z7OvbQogrzElWkpxqt8cY"/>
+<div>
+<h4 class="text-xs font-semibold leading-tight hover:text-blue-900">
+<a href="#">New Management Committee Formed for Indrali Manchi Noorani Masjid</a>
+</h4>
+<span class="text-[10px] text-gray-400">2h ago • <span class="text-red-600">Religion</span></span>
+</div>
+</article>
+<article class="flex gap-2">
+<img alt="thumb" class="w-16 h-12 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaxUqKxsEugHQ4clyUDMYPKRlm4KBu4pCPHXfURKBHL-OeKAcm6hrC1NTAAekYzF3FBYnoKeNG5mmQD1_Ml-mZZei_COL9Ow7ktjjR1yQMeaRecUtnApJ5eLO_g0dm4kq_D8TcRaHqZkfQlO4IXzD5r2hpTEiNKjFpZlO1y8fxn8aeWgXVKa0f0WMhyUegbPZWJ6KigT40MpYv63BUZ7sDJCpF1TQeS6dkbx91mlbWC0Im56O1GF1m"/>
+<div>
+<h4 class="text-xs font-semibold leading-tight hover:text-blue-900">
+<a href="#">One Killed, Three Injured as Speeding Lorry Rams Footpath in Bellary</a>
+</h4>
+<span class="text-[10px] text-gray-400">3h ago • <span class="text-red-600">Bellary</span></span>
+</div>
+</article>
+<article class="flex gap-2">
+<img alt="thumb" class="w-16 h-12 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxOi4Fs1j5YHEHWfu3CSYK_C0NbYj2Q9CCxzrAr9UGD-zJXd43i5mnLKdI8tFm3kHN_75MEBPmmDqa1V_eWAfJTgc0a7kRbA1zrZGDMANu226wOTmeEYTBJ0oza7o4dsMk3ZyvawhPUldr9_bjYG9GqKX8I8XlAN_nHc8MOR1iul8WBZGlaSLIjGFojH8oK1YWgI6M1nB7rDb7-BR5tiE4kfqXsniyrZCa3XUvJBQjp4PPTzssBGRU"/>
+<div>
+<h4 class="text-xs font-semibold leading-tight hover:text-blue-900">
+<a href="#">National Lok Adalat: 61,367 Cases Settled in a Single Day in Udupi</a>
+</h4>
+<span class="text-[10px] text-gray-400">7h ago • <span class="text-red-600">Judiciary</span></span>
+</div>
+</article>
+<article class="flex gap-2">
+<img alt="thumb" class="w-16 h-12 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfCtYUozBBuCzEEyKX1tqyEYvNxAcAEWztVAaZLBVE-pRqmMycuVZKcHZ7YH7LPiFJGraurW95mOtaS0HcA7Pe6mQrbF-hjGzPr7OxDjlG8uG4SlNPkwyH5R32LmnErhnKzGejPhA1ifwWL0v-5ugujh_xu2qVtxm6Cc6xhYdDS5AQqpcIeeJW_gSIEm1jbETM-Qbbmw0Dh2B8cfc9pMMCe2PE53zS_UOklBYiBBMWtdJALtEoP-H1"/>
+<div>
+<h4 class="text-xs font-semibold leading-tight hover:text-blue-900">
+<a href="#">Industrial Visit Organized for Kodi Bearys First Grade College Students</a>
+</h4>
+<span class="text-[10px] text-gray-400">7h ago • <span class="text-red-600">Kundapura</span></span>
+</div>
+</article>
+<article class="flex gap-2">
+<img alt="thumb" class="w-16 h-12 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDA_icdXS8GHhxsU4LDIuK12nxE5jiLkKh2l11pEtbgwjPSiKfCj0CFwCWPebB9qmssIvWArKaDwLXHedx-h7sKgTODrf7Sn06fv_qJk-G0zgA57S2S6gPSvOtK03M_dEBAj9D10PsRcDyGjM88RCLmnNNB1zdi1RPxStlsyuLJrBeCp8JHggbnWxPrWve8dffS4Qzs1qpYYJRgQwoScQpDRWi_6lFbatvy0zaAOnez-2FIwEN4-g0"/>
+<div>
+<h4 class="text-xs font-semibold leading-tight hover:text-blue-900">
+<a href="#">Andhra Pradesh Native Murdered in Malpe: Police Launch Investigation</a>
+</h4>
+<span class="text-[10px] text-gray-400">7h ago • <span class="text-red-600">Malpe</span></span>
+</div>
+</article>
+</div>
+</div>
+<!-- Long Read Highlight Card -->
+<div class="relative bg-zinc-900 rounded-lg overflow-hidden shadow-sm group">
+<div class="p-3 bg-red-600 text-white text-xs font-bold flex justify-between items-center">
+<span>Long Read</span>
+<i class="fa-solid fa-arrow-right"></i>
+</div>
+<div class="relative h-64 overflow-hidden">
+<img alt="Featured Article Portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6zW9E4wTs4zacevXWiJ6CY-NiHalT3b9uijC6EYfLcdWFsn3Mt5D_NFzJkl3WoH8ayVMDA84pCfGRG2oaoUNnXx30bcja4jMK6o4GB4gdEzcOXS7ZDxS2kf-unpsz0lup6WfCPLKly1FbJwNPJjHWVLYTTV5qoND4JaYIuMn2CQgxZMRgJ_Iu-wYPIPsQgCn7rmQO0bGWlkH3lvl-FXsnCISX--9qefeJdl_4rrpV_ueHScdWsVzr"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex flex-col justify-end p-4 text-white">
+<span class="bg-red-600 text-[10px] font-bold uppercase px-1.5 py-0.5 rounded w-max mb-1">ARTICLE</span>
+<h3 class="font-headline font-bold text-sm md:text-base leading-snug">What to Call Those Who Leave Halfway?</h3>
+<div class="flex items-center justify-between text-[11px] text-gray-300 mt-2">
+<span>9 Sept</span>
+<span class="text-white font-semibold flex items-center">Read more <i class="fa-solid fa-angle-right ml-1"></i></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- END: GridEditorialLayout -->
+<!-- Weather Widget & Live Archive Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Gangolli Weather -->
+<div class="md:col-span-4 bg-white p-4 rounded shadow-sm border border-gray-200">
+<h3 class="text-sm font-bold font-headline text-gray-800 border-b pb-2 mb-3">Gangolli Weather</h3>
+<div class="flex items-center justify-between mb-4">
+<div>
+<div class="text-xs text-gray-500 font-semibold">Night</div>
+<div class="text-xs font-bold text-gray-800">Tuesday</div>
+</div>
+<div class="flex items-center space-x-2">
+<i class="fa-solid fa-cloud text-3xl text-gray-400"></i>
+<div>
+<div class="text-2xl font-bold text-gray-900">27°C</div>
+<div class="text-[10px] text-gray-500 font-medium">Scattered Clouds</div>
+</div>
+</div>
+<div class="text-right">
+<div class="text-[10px] text-gray-400">Feels like</div>
+<div class="text-sm font-bold text-gray-700">30°C</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-[11px] text-gray-600 border-t pt-3">
+<div><i class="fa-solid fa-droplet text-blue-500 mr-1"></i> HUMIDITY: <strong>82%</strong></div>
+<div><i class="fa-solid fa-wind text-blue-400 mr-1"></i> WIND: <strong>1 km/h</strong></div>
+<div><i class="fa-solid fa-gauge text-gray-500 mr-1"></i> PRESSURE: <strong>1013 hPa</strong></div>
+<div><i class="fa-solid fa-eye text-emerald-500 mr-1"></i> VISIBILITY: <strong>10 km</strong></div>
+</div>
+</div>
+<!-- Live Archive Ticker -->
+<div class="md:col-span-8 bg-white p-4 rounded border border-gray-200 shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between border-b pb-2 mb-3">
+<h3 class="text-sm font-bold font-headline text-gray-800 flex items-center">
+<span class="w-2.5 h-2.5 rounded-full bg-red-600 mr-2 animate-ping"></span> Live Archive
+          </h3>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="bg-gray-50 p-3 rounded border border-gray-200">
+<span class="text-[9px] uppercase font-bold bg-green-100 text-green-800 px-1.5 py-0.5 rounded">Completed</span>
+<span class="text-[10px] text-gray-400 ml-1">10 updates</span>
+<p class="text-xs font-semibold text-gray-800 mt-1 line-clamp-2">Cabinet meeting in Mangaluru</p>
+<span class="text-[9px] text-gray-400 block mt-2">Completed 17 Sept</span>
+</div>
+<div class="bg-gray-50 p-3 rounded border border-gray-200">
+<span class="text-[9px] uppercase font-bold bg-green-100 text-green-800 px-1.5 py-0.5 rounded">Completed</span>
+<span class="text-[10px] text-gray-400 ml-1">04 updates</span>
+<p class="text-xs font-semibold text-gray-800 mt-1 line-clamp-2">Apple event live updates: Foldable iPhone and watches expected</p>
+<span class="text-[9px] text-gray-400 block mt-2">Completed 14 Sept</span>
+</div>
+<div class="bg-gray-50 p-3 rounded border border-gray-200">
+<span class="text-[9px] uppercase font-bold bg-green-100 text-green-800 px-1.5 py-0.5 rounded">Completed</span>
+<span class="text-[10px] text-gray-400 ml-1">104 updates</span>
+<p class="text-xs font-semibold text-gray-800 mt-1 line-clamp-2">Thousands regroup at Jantar Mantar protest site; Rahul leads Congress protest</p>
+<span class="text-[9px] text-gray-400 block mt-2">Completed 23 Jul</span>
+</div>
+</div>
+</div>
+</div>
+<!-- BEGIN: HeadlinesRow -->
+<section class="bg-white p-5 rounded border border-gray-200 shadow-sm">
+<div class="border-b pb-2 mb-4">
+<h2 class="text-base font-bold font-headline text-gray-900 uppercase tracking-wide">Headlines</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Card 1 -->
+<article class="space-y-2">
+<img alt="CITU" class="w-full h-32 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCCzBNXZBOlC2-OOug_51XA-bvr5ztz8l9wjemK7wMFmaaJitK1BksPVc0fBTMpRnZJ79KR78yfiC1ynh690g7q_61EXh0RHgfganpJ1iKkXt8wz14f21YOCRvEx18aHMt-Di1pTp81cIZHukOFqEghuCPSCWr0Tc-I1gupvxkYzvZmbiEnmP9LVKvQOEki-2RQ0mv8qAIm6exyuywDIcWfmOEetaQDiabGL6HYp5QWFzv34wX9cnz"/>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">CITU Protests Outside Kundapura MLA Office Demanding Minimum Wages</a>
+</h4>
+<div class="text-[10px] text-gray-400">2h ago • <span class="text-red-600 font-semibold">Kundapura</span></div>
+</article>
+<!-- Card 2 -->
+<article class="space-y-2">
+<img alt="Protest" class="w-full h-32 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQkE5dnDyele1yTZNsQDsNtyvuEZdZ8HproxoPPZbrccrvmsx4X-FOA1xm-Kk7n2UcrN0w9OvU4y5RLjHY88nvc8hXGhZ_i--hYr6tINlWHh4kBzCZXEO2Oc7ln8OqxNoYF29YoyBOv36rhpMsUFrYf4dmAq94_GpUNqmlz7StXczbl0EGAx_jEAKscZzCQHizBDO3lv854m7y9NB9iuYnW2f2VQVRMbH1UTLPbSRuMSZpinqzdOhd"/>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Protest in Kundapura Demanding Removal of Election Commissioner Gyanesh Kumar</a>
+</h4>
+<div class="text-[10px] text-gray-400">2h ago • <span class="text-red-600 font-semibold">Byndoor</span></div>
+</article>
+<!-- Card 3 -->
+<article class="space-y-2">
+<img alt="Nutritious food" class="w-full h-32 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL1jcMS1t7j8UhvvENshHSYwoRuWAsGnTyj_eniX4z-yU8RUQMT4kfg-zWmAWbvqQL_VjwkLYR3ox-aT0OD63eDGNDHzc1Mid1LFdVG-797KmbXW0nS6GYjG6Xa8jHnLi4zW2qk43XUrZbaxAyOwn9m52wtQ0pv7PZgKFQpzJpO25le4ZaDhSjitE4WPLQEn19OlMbkhGyzbxOyZZteodZUukKuRGTwLyZlew8MDdeyTeG-tYU0uBw"/>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Gangolli: 'Nutritious Food Month' Festival Celebrated with Grandeur</a>
+</h4>
+<div class="text-[10px] text-gray-400">2h ago • <span class="text-red-600 font-semibold">Gangolli</span></div>
+</article>
+<!-- Card 4 -->
+<article class="space-y-2">
+<img alt="Prakash Raj" class="w-full h-32 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8yVsxPvf8FKVXZmoFZ7eskqLKU-Q-vS3jR9-I-auWSw_0mpj0wzeoEzAnBfnYnWq22oxGofogLcuxX-FmKt-SBkyk60KRIVN153IrEksUpLAfHduPlcDOp1EA7tZhvxeyGEUwIAyLzueFkXxnyWSZQ69oK0H8t4uhr5I4QQAGfJqH_p0CdjLBGwM_-Yb8DUpS7ixtIYWr8SFVfzkbjACVoGXfx8_jrgWiUfjAh6gxmSYRywcUzMLS"/>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Mangaluru: Prakash Raj Demands Cancellation of Flawed SIR Process</a>
+</h4>
+<div class="text-[10px] text-gray-400">24 Sept • <span class="text-red-600 font-semibold">Mangalore</span></div>
+</article>
+</div>
+<!-- Extended Headlines Row -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 mt-6 pt-6 border-t border-gray-100">
+<div class="md:col-span-6 space-y-2">
+<h3 class="font-headline font-bold text-lg leading-tight hover:text-blue-900">
+<a href="#">Udupi District Police to Host 5KM Cycle Rally on October 2</a>
+</h3>
+<p class="text-xs text-gray-600">Udupi District Police will organize a 5KM cycle rally from Manipal to Udupi on October 2 to raise awareness on traffic safety and environment conservation.</p>
+<div class="text-[10px] text-gray-400">24 Sept • <span class="text-red-600 font-semibold">Udupi</span></div>
+</div>
+<div class="md:col-span-6">
+<img alt="Cycle rally" class="w-full h-40 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbhICyKIYjUcieNsJlXB4DP9IwID7d8x4I-8j-JmZzcVOSamT5rWB13Fuhl_6RJKQMXj_zemT_gTDB6eUaTKi3D-7pC5hN4D85IwxE12aJNOxr1u-aZ1ywHjdMI_CkYciNa7XTRB6YnLIWtsz1IYk-zSl5tLi2I2GRSobOr-zxoBD1jHj367FjZQSEE8BFB3o-aKS0mosk-mmHeOxjjSCveSZfReJvV8SX5dWc3D8_n1wSP_RycWRF"/>
+</div>
+</div>
+</section>
+<!-- END: HeadlinesRow -->
+<!-- BEGIN: RegionalVerticalSection - Gangolli -->
+<section class="bg-white p-5 rounded border border-gray-200 shadow-sm">
+<div class="flex items-center space-x-2 border-b pb-2 mb-4">
+<span class="w-2.5 h-6 bg-red-600 inline-block"></span>
+<h2 class="text-lg font-bold font-headline text-gray-900">Gangolli</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-7 space-y-3">
+<img alt="Gangolli Event" class="w-full h-64 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_SKThcZo-du4TfyK4TlWtWw9hDk3kAwR4axS5-CF0vEzcUa2YEAf9UfP52uNbj5LpwZkPTdF2-VEJHQ3eEQKUtASMBKLDB8czr1p7FVvYPZtbrCpVbmKUbC__MInKM5p79sMOPsMq6kITUkipDlxDmKpxkdZdZ734gTvYwDaZnp1Y9PQyX9j_Ev5_RIx0QTPacpl5Llk6Jil2VoNB9Soh55I0JGungFXDHpHrsvUdDCfrWKoTq-YH"/>
+<h3 class="font-headline font-bold text-base leading-snug hover:text-blue-900">
+<a href="#">Gangolli: 'Nutritious Food Month' Festival Celebrated with Grandeur: Sanitation Workers Honored</a>
+</h3>
+<p class="text-xs text-gray-600 leading-relaxed">
+            Gangolli hosted the Poshan Abhiyaan food festival, featuring nutritional awareness drives and felicitations for local sanitation staff.
+          </p>
+<div class="text-[10px] text-gray-400">20 Sept</div>
+</div>
+<div class="md:col-span-5 space-y-4">
+<article class="flex gap-3 pb-3 border-b border-gray-100">
+<img alt="Workers India" class="w-28 h-20 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3TE0ETnqFWEw6eTFimAOp1IWRpZ9lqyA6tTs5toK4yOeQBjBdXiJVL_kgPvzAGqs3tCNUipR81kSWPOBRjR7RnwB8mMZl_nCig9wNsyA6bXWu2chA8r5MrflzSgfj9lmq5zkJT57-8RhjEw_osuoaYm15wouuX4nhAPVFsVmSZYcTXg8Y5_Y3yQEkYFsn2oNfa6uor9Q4y8_0gBoF00VeSrqgEGamM73S6CaYD7twLCruny7wZsq_"/>
+<div>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Gangolli: Workers India Federation Unit Inaugurated at Immaculate Conception Church</a>
+</h4>
+<span class="text-[10px] text-gray-400 mt-1 block">21 Sept</span>
+</div>
+</article>
+<article class="flex gap-3">
+<img alt="Fisherman Injured" class="w-28 h-20 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBogwyyTTi29pePkPVIv5VSmg4G5w0iAOSPWdgELqfAuYqlcHgPGsOx7TN9R-qRnAVsJqw090iR25Fs7w4mcLmyBHuD5KTrEO--NyOcSqpn9U4mR9uGDzRgRT8aLbst5-7e_4b_esStYmK7yIvh4j3mdGZJBeMSlsB4C_D-8J5Kv3EMSFPHiHQ14cXakie8KztgFkisedLktYp22K5isuXPD6xWWkOing8EScfx_v2e9rcARqVhoP7"/>
+<div>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Gangolli: Fisherman Injured After Falling from Boat Succumbs to Injuries</a>
+</h4>
+<span class="text-[10px] text-gray-400 mt-1 block">21 Sept</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: RegionalVerticalSection - Gangolli -->
+<!-- BEGIN: RegionalVerticalSection - Kundapura -->
+<section class="bg-white p-5 rounded border border-gray-200 shadow-sm">
+<div class="flex items-center space-x-2 border-b pb-2 mb-4">
+<span class="w-2.5 h-6 bg-blue-600 inline-block"></span>
+<h2 class="text-lg font-bold font-headline text-gray-900">Kundapura</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-7 space-y-4">
+<article class="flex gap-3 pb-4 border-b border-gray-100">
+<img alt="Schemes" class="w-32 h-20 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG3FtJWrtkYeoOIRYmbhlm_AUtoD6C2M5KF4owOl8vQUhJ4Vnabpd8nvf4kVHqvlS6bCsw6wXkE2OOfrGKBWQBXHT3TfM5cWYioe3IjZ9a1vXGAn3hLG-FvCsm5jUPAcI68g4oIE0tUcNUsWYiNQlYdmFNUh0eyJn_2SBX9MKGd98cSmwV_KUZjZoYGv6a_SyMtP5eV38LabY5-90gHwA13_1C7KYf652KNI_qsupp2ajzgB6FRbBl"/>
+<div>
+<h4 class="font-headline font-bold text-sm leading-snug hover:text-blue-900">
+<a href="#">Applications Invited for Various Schemes of Karnataka State Women's Development Corporation</a>
+</h4>
+<span class="text-[10px] text-gray-400 mt-1 block">25m ago</span>
+</div>
+</article>
+<article class="flex gap-3">
+<img alt="Water crisis" class="w-32 h-20 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDKWMKiaxjPG8sYtq0OJJ0aiPISKlt64Q99TRufvtGMzUL2pIYwOV-ZLh88jGy6e7q0XntoyYjPaNnu82UnCWKr0-o7IaSUAvSmVLwzh_LE0ST5-KwJhOLkroMo1qGklbAUdL-e7SwHxBroi_lxg9GhSVrOvRPWLuzXmYKAXVxkxItDGNFcXcVutIg0SJ7lXMDZ0z2FWqe4I-p-lDpwZnUoWHyDir5AHQhBYi7hqYVZ6FALMYCP3Rn"/>
+<div>
+<h4 class="font-headline font-bold text-sm leading-snug hover:text-blue-900">
+<a href="#">Prepare to Face Impending Water Crisis in Kundapura and Byndoor, Says MLA</a>
+</h4>
+<span class="text-[10px] text-gray-400 mt-1 block">1h ago</span>
+</div>
+</article>
+</div>
+<div class="md:col-span-5 space-y-2">
+<img alt="Industrial visit" class="w-full h-44 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrR0dw_B4bKMGjLD-rQdMp4C1WG1V5wI8IlGnjaqjio_pI9IgPBlWD71IYlVDULScL99nclrTYxmiCEgtn6FUWCoOLO1FHupBbtxKJ9KnF0z10uVo4h4sZeFnbjeQ6Aj3z674YYmVjPNju1roXIrgce_ow0mfnINjJjmjmsn_FnmgI9_sOz6uO0BKctPD9Yo9M7NpAecWJJpvONyBZx2Ue6WUEQxQVeZ8w-puRk17T2l2r7566IEFo"/>
+<h3 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Industrial Visit Organized for Kodi Bearys First Grade College Students</a>
+</h3>
+<p class="text-[11px] text-gray-500">B.Com and BBA students of Kodi Bearys College embarked on an industrial study visit to local processing and manufacturing units.</p>
+<span class="text-[10px] text-gray-400 block">7h ago</span>
+</div>
+</div>
+</section>
+<!-- END: RegionalVerticalSection - Kundapura -->
+<!-- BEGIN: RegionalVerticalSection - Udupi -->
+<section class="bg-white p-5 rounded border border-gray-200 shadow-sm">
+<div class="flex items-center space-x-2 border-b pb-2 mb-4">
+<span class="w-2.5 h-6 bg-purple-600 inline-block"></span>
+<h2 class="text-lg font-bold font-headline text-gray-900">Udupi</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-7 space-y-2">
+<img alt="Disability Schemes Banner" class="w-full h-56 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg2addRKvxOOoPnUxZnYTvToQVWgmtNBG5EnnZl86lNV0DxMKwR2So0N_vG3c29UTJLNSVl3AaJbQt5hQl3BNERISPih8ZMJCbbPt3pTGK4cdH3pA30WJtlkS5Vlm3ekutXbHfMANnD2iPfmlTQtUYbHpYa1d6LXlqYdyGgsjRUs8x8ypel1L__8RCwiZn6qB50Q5HExx2dCyjVC_KiKQTu6JyKkMeI-pxbjG71O3kV9m2MMedGiAv"/>
+<h3 class="font-headline font-bold text-base leading-snug hover:text-blue-900">
+<a href="#">Udupi: Applications Invited for 14 Disability Schemes</a>
+</h3>
+<p class="text-xs text-gray-600 leading-relaxed">
+            Applications are open for 14 welfare schemes for persons with disabilities in Udupi district until October 30.
+          </p>
+<span class="text-[10px] text-gray-400 block">19m ago</span>
+</div>
+<div class="md:col-span-5 space-y-4">
+<article class="flex gap-3 pb-3 border-b border-gray-100">
+<img alt="Schemes" class="w-28 h-20 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCckf0mSllNTOL34ej3gDK7f6CL2uQM6KPnKfaOJEw26DfD-7s6EUtyfYZOiZOwGm7QQPDFdsrI5tex1gU0voRd-SCh_jJ_npOlh3FFOlwynFHKB0u8mV_fJd8kp4tb_mmBOZ4urPHXp-jc0E_p9AHbFCJeTsb1KUIj3F-FQ-l3cMiIjihwxu9iJp2Dog6gs8IPOyfI2fi_jhd5nqyaP-vmaWd2RBlV8GeUwmC9fTOzgjcvt-hQXNmC"/>
+<div>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Applications Invited for Various Schemes of Karnataka State Women's Development Corporation</a>
+</h4>
+<span class="text-[10px] text-gray-400 mt-1 block">25m ago</span>
+</div>
+</article>
+<article class="flex gap-3">
+<img alt="Award Winner" class="w-28 h-20 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-3CoXFjsPvMDUyFGmiu6uez5JIkK4ni_jazyjiqm7nUWtGLcxhZmgw7Aga1WTm2FTCRY1h96s9wTSW1YtzEBQNggy3Gl7vQWxuZLQCewRz_6WCc8XHt971QQpPC82DBLZ_QQwEgqeEuPBC4Olc5llLYRFTOVAk8rShYxlj4w8O5QAKO8Fv5UXg_WhUyccMUbUdX1RKGNa1u6FSPxr5SNQePQNOFnMZhwHP1ITSA_Rb2xaWFhQU4uQ"/>
+<div>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Theatre Artist and Cultural Organizer Raviraj H. P. Chosen for Sangolli Rayanna Award</a>
+</h4>
+<span class="text-[10px] text-gray-400 mt-1 block">31m ago</span>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- END: RegionalVerticalSection - Udupi -->
+<!-- BEGIN: EducationAndPoliticsGrids -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Education Section -->
+<section class="bg-white p-5 rounded border border-gray-200 shadow-sm">
+<div class="flex items-center space-x-2 border-b pb-2 mb-4">
+<span class="w-2.5 h-6 bg-cyan-600 inline-block"></span>
+<h2 class="text-base font-bold font-headline text-gray-900">Education</h2>
+</div>
+<div class="space-y-4">
+<article class="flex gap-3 pb-3 border-b border-gray-100">
+<img alt="Industrial visit" class="w-24 h-16 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNAA6cyXna1POr9ug-I8fEwM0G8pb47zJg4Ih-v4FKEWWobFkch38gjeRM4rWl09EQCX7JJ2SuVFVZ4rVoUvDMXPBZZKJpoWTfTnCrT4SVoifXOvPu4jGccjG402-j0egcQ3hRioBT05bH48F_t1G0n42vWH5LciC8FeJED3iP9Db9czhG9WIeYZCd0CQCpsvtgUWwxHzBP5StIUz0Y3SQEkylK2OhQlZNT8CW_3XWRzuBnyMDYdLQ"/>
+<div>
+<h4 class="font-headline font-bold text-xs hover:text-blue-900 line-clamp-2">
+<a href="#">Industrial Visit Organized for Kodi Bearys First Grade College Students</a>
+</h4>
+<span class="text-[10px] text-gray-400">7h ago</span>
+</div>
+</article>
+<article class="flex gap-3 pb-3 border-b border-gray-100">
+<img alt="PhD Awardee" class="w-24 h-16 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR7A3miL2l67TwpOfLJo99URfUsz_GnRuqtvsd3iWrovecY40bB9n-BmLEYh8coHzpYYY0HZbyvWQ7vJAdTpJyrCRP2dDLxgI7CNNiSDikVUGcm9QHhP1Gbfz_bkCaMED93GbIGIACK6zByR3wawrl48yiecGtVzg_guYjIBlxPOn7jhKgwx_1-GFOKsYzQUPPaGjxNk5AjVbZ36nMZytOtfBBQ-2oEoyPFMZ8vzGIK6dqRM43Ty1i"/>
+<div>
+<h4 class="font-headline font-bold text-xs hover:text-blue-900 line-clamp-2">
+<a href="#">PhD Awarded to Dr. Mehvish Musheer Sheikh by MAHE</a>
+</h4>
+<span class="text-[10px] text-gray-400">20 Sept</span>
+</div>
+</article>
+<article class="space-y-2">
+<img alt="State Boxing" class="w-full h-36 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCksLF8j_NFsPjEur_SzLv8avljV5kwaRFoQsIdmi6MzlmNnUcRz9DdFKz8HX_Upy6Gu3WRKW4fo6drTRTuaDfhr0fticyyx8kToAvqniRhpiVJRAOXboFUKIqjhJU1vvDsIikQy6PHuz3dO2Vx_qcXgr3Jg5izmKWjxmu6tkhQK0OuDtJ6k6nRscl0GFNdZzV0VxVoZLpwBoykodeTjihftT-KLnbrFwYPTwlI7qMb1F2y6F5C_o4u"/>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Hemmadi: 14 Janata PU College Students Qualify for State-Level Boxing</a>
+</h4>
+<span class="text-[10px] text-gray-400">27 Sept</span>
+</article>
+</div>
+</section>
+<!-- Politics Section -->
+<section class="bg-white p-5 rounded border border-gray-200 shadow-sm">
+<div class="flex items-center space-x-2 border-b pb-2 mb-4">
+<span class="w-2.5 h-6 bg-amber-600 inline-block"></span>
+<h2 class="text-base font-bold font-headline text-gray-900">Politics</h2>
+</div>
+<div class="space-y-4">
+<article class="space-y-2 pb-3 border-b border-gray-100">
+<img alt="Prakash Raj Press" class="w-full h-36 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyo1wbuJoTqmybHTdYnmypy2F2hFOj4sZhTrPw29TmZK4dkTk2EcEsCtVEzypj8ynQkx135zBvJBO9_zh5m8ygecj2SdQVSSXnckyEOFHJKg1YtxrwoM6FrUjAwUaki79l1dPExWv6a6gFV_qZTodZd-bW5uT-9jB43MGAVCBxc4pUc3UBBP4L_T60yvG2bDiJNY2WTsxd-pNt-ETJVL4T5yNsc1EoXEx000DlIwgpJ1V3ys7GWPMM"/>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Mangaluru: Prakash Raj Demands Cancellation of Flawed SIR Process and SC Probe</a>
+</h4>
+<p class="text-[11px] text-gray-500 line-clamp-2">Prakash Raj demanded scrapping of the SIR voter revision process and a Supreme Court probe into ECI operations...</p>
+<span class="text-[10px] text-gray-400">20 Sept</span>
+</article>
+<article class="flex gap-3 pb-3 border-b border-gray-100">
+<img alt="Karnataka CEO" class="w-24 h-16 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRiN86cHImSTsGQF4cE5HIJIUw2FPZCwpREgLNjGmR5ibN9SPv1KesuGKa4zQ-mqgOseZWYPneC87DaIfkmw4ZZ6oKcVvBr36l-7HhlYc9YKVMKfRcILxL1caJCgcbs1kL9zizyBQU0dFDCZaApzNXAnTlmHSe6qC0zLgdJyImIZp-rD98WfMESVycFtnQ7FMU5EGM8TG8AHaQd2YAREgxJf2PAjCQSXj-hanfJXjTrp2O7zY07oON"/>
+<div>
+<h4 class="font-headline font-bold text-xs hover:text-blue-900 line-clamp-2">
+<a href="#">SIR 2026: Adult Family Members Can Attend Hearing for Seniors, NRIs, Says Karnataka CEO</a>
+</h4>
+<span class="text-[10px] text-gray-400">11 Sept</span>
+</div>
+</article>
+<article class="flex gap-3">
+<img alt="Rizwan Arshad" class="w-24 h-16 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWsbv2a8C4Bqk5qwMBFzt9kzUOM4o7JxlY_WUITq5_3EQQOsrd0xgxsccYQTK16OeR2gaktQ-Y1VhDGNo-rmGrhzX1Rx84FYaehozqKkbw_eTrom-1pLsuZgt3zF7AI4SXNKw4LOofpaEHrWvrLXHCSaO8ahJ9lofo2-hoRK2ZonSU45bDX290qH6nX8_QdN1j_1SXbr_TkeSURBo6GiNnQJP2PLBFuELbPB4r5q7sAWlD1RowT6L0"/>
+<div>
+<h4 class="font-headline font-bold text-xs hover:text-blue-900 line-clamp-2">
+<a href="#">ED, IT, CBI Operating Like BJP's Yuva Morcha, Alleges Minister Rizwan Arshad</a>
+</h4>
+<span class="text-[10px] text-gray-400">9 Sept</span>
+</div>
+</article>
+</div>
+</section>
+</div>
+<!-- END: EducationAndPoliticsGrids -->
+<!-- BEGIN: SportsAndArticlesGrids -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Sports Section -->
+<section class="bg-white p-5 rounded border border-gray-200 shadow-sm">
+<div class="flex items-center space-x-2 border-b pb-2 mb-4">
+<span class="w-2.5 h-6 bg-teal-500 inline-block"></span>
+<h2 class="text-base font-bold font-headline text-gray-900">Sports</h2>
+</div>
+<div class="space-y-4">
+<article class="flex gap-3 pb-3 border-b border-gray-100">
+<img alt="Dammam KPL" class="w-28 h-18 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjyQuzdI4suq92xGNNskT042WEdfZeJVBOy466MKhTK_vPCvbnuubPTp2soo0HsqOqYNCYGE9AuoncqsdOocP3hsXsNfeFe4alQlvmgXASBTuQUJYbRQ8MBj8YEZxjTSV4kEGmCuzy7bHssdNOCvkWyfD2yhTBSd8zhV8p0kSHn4STXraSzIwiTw_i3_09LtkKRbC25BhfG5QOveu5Kukfyl2rl6GMidPDbULUjPRtAL3ksX2RYOqD"/>
+<div>
+<h4 class="font-headline font-bold text-xs hover:text-blue-900 line-clamp-2">
+<a href="#">Dammam KPL, Season 4: Kundapura Fighters Crowned Champions</a>
+</h4>
+<span class="text-[10px] text-gray-400 mt-1 block">28 Sept</span>
+</div>
+</article>
+<article class="space-y-2">
+<img alt="Throwball Winners" class="w-full h-36 object-cover rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8up6A-4tu0r1_vGbtDJ7KTfIF3gYuEcZrTzBn6HNg6e9kKy3SbBHYlHR2FpB7yQ6RC58yOwIFXBg3W-951md_VzPeL9vZue2ujIqnLk4pGZ_EgzxrCZytgBPsInND582zCl-mHVTuuJXe5XYuRUZ7AVgK3CQktrxIkjYNGsVW8WI1u3m8IACNwAgHXdSxuheIbVqhCSMqPT5t2Knnpk8UEH8Eus5b0VF86tehO1eY3zY-nlqABbTm"/>
+<h4 class="font-headline font-bold text-xs leading-snug hover:text-blue-900">
+<a href="#">Gangolli Saraswati Vidyalaya Wins Twin Titles in Kundapura Taluk Netball Tournament</a>
+</h4>
+<span class="text-[10px] text-gray-400">20 Sept</span>
+</article>
+</div>
+</section>
+<!-- Articles Section -->
+<section class="bg-white p-5 rounded border border-gray-200 shadow-sm">
+<div class="flex items-center space-x-2 border-b pb-2 mb-4">
+<span class="w-2.5 h-6 bg-rose-500 inline-block"></span>
+<h2 class="text-base font-bold font-headline text-gray-900">Articles</h2>
+</div>
+<div class="space-y-4">
+<article class="flex gap-3 pb-3 border-b border-gray-100">
+<img alt="Book Cover" class="w-28 h-18 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjEGU61M-JfNdJnPGvkfitfU7X_RNNhcCfepEzTm9TXQ24NRweq4DNYtNV8T3vp4Tq8kjteEA4nyvwYjr2KHQd3Mo083CWW_JvXAG6VojHAixQOnWFda1CzyzuFyPz32XuHEWMuVdl8CvZtoETPs250qnhZwFQyYb6G3xyqrmV1tqeG3UU_c2k_m8-OPl1Q45YTHnYHUfJJ5r_E4B38LQYC50Ocj_WsJjD1OCNJWq2Oew8AgaFruri"/>
+<div>
+<span class="text-[9px] bg-red-600 text-white font-bold px-1 py-0.5 rounded">ARTICLE</span>
+<h4 class="font-headline font-bold text-xs hover:text-blue-900 line-clamp-2 mt-1">
+<a href="#">Where Should the Poor Live in This Deceitful World?</a>
+</h4>
+<span class="text-[10px] text-gray-400">7 Sept</span>
+</div>
+</article>
+<article class="flex gap-3">
+<img alt="Story" class="w-28 h-18 rounded object-cover shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2tsHGPBz4r2Otc1ibCQUz45eNMq7UKR3JOwXB2y7lvTLF7hLjk0pAqPYLCUAuD7eLD4C3EJ0D8Fjul39DL5-UpodeCdCtEJBXOrGT61FnvIrMdiqN5yaH2o-IIbvvYzSOl6tvMHS1F0_TqHQEiqTjzjNUDkp0gnM4_X7dlEQXP40ZY3g80v14maVynnq7fqBoneRiuZDgwajT72dGLL-Vz_GU5xyoXSGL3f9HWt_7GrG9d43vaVcC"/>
+<div>
+<span class="text-[9px] bg-red-600 text-white font-bold px-1 py-0.5 rounded">ARTICLE</span>
+<h4 class="font-headline font-bold text-xs hover:text-blue-900 line-clamp-2 mt-1">
+<a href="#">I Won... I Grew Stronger!</a>
+</h4>
+<span class="text-[10px] text-gray-400">7 Sept</span>
+</div>
+</article>
+</div>
+</section>
+</div>
+<!-- END: SportsAndArticlesGrids -->
+<!-- BEGIN: RankedListsSection -->
+<section class="bg-white p-6 rounded border border-gray-200 shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Left: Most Viewed -->
+<div>
+<div class="border-b-2 border-gray-800 pb-2 mb-4">
+<h3 class="text-lg font-bold font-headline text-gray-900">Most viewed</h3>
+<p class="text-xs text-gray-500">What readers are clicking on</p>
+</div>
+<ol class="space-y-4">
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">1</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Byndoor: Office Bearers Selected for Upralli Kalikamba Women's Committee
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">2</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Gangolli: 'Nutritious Food Month' Festival Celebrated with Grandeur; Sanitation Workers Honored
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">3</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Gangolli Saraswati Vidyalaya Wins Twin Titles in Kundapura Taluk Netball Tournament
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">4</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Byndoor: Prize Distribution Held for Essay Competition at Maravanthe School
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">5</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                "Huffaz are part of Allah's promise to safeguard the Qur'an": Maulana Maqbool Kobatte in Mangaluru
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">6</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Udupi: Unity Souharda Co-operative Holds Annual Meeting
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">7</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Gangolli: Workers India Federation Unit Inaugurated at Immaculate Conception Church
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">8</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Gangolli: Shaurya Disaster Management Team Repairs Potholes for Ganeshotsav Procession
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">9</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Udupi: Absconding Accused Arrested After Six Years in Honnavar
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">10</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Mangaluru: Injured Student Dies After Wall Collapse at Convention Hall
+              </a>
+</li>
+</ol>
+</div>
+<!-- Right: Latest Stories -->
+<div>
+<div class="border-b-2 border-gray-800 pb-2 mb-4">
+<h3 class="text-lg font-bold font-headline text-gray-900">Latest stories</h3>
+<p class="text-xs text-gray-500">Fresh from our newsroom</p>
+</div>
+<ol class="space-y-4">
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">1</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Karkala: Two Youths Drown in Suvarna River at Hermunde
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">2</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Udupi: Applications Invited for 14 Disability Schemes
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">3</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Applications Invited for Various Schemes of Karnataka State Women's Development Corporation
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">4</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Theatre Artist and Cultural Organizer Raviraj H. P. Chosen for Sangolli Rayanna Award
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">5</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                World Heart Day: Heart Health Awareness Sculpture Unveiled at Kasturba Hospital Manipal
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">6</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Congress Urges Udupi DC to Repair Non-Functional Streetlights and High-Mast Lights
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">7</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                Prepare to Face Impending Water Crisis in Kundapura and Byndoor, Says MLA
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">8</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                New Management Committee Formed for Indrali Manchi Noorani Masjid
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">9</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                One Killed, Three Injured as Speeding Lorry Rams Footpath in Bellary
+              </a>
+</li>
+<li class="flex items-start">
+<span class="text-2xl font-black font-headline text-gray-950 w-8 shrink-0">10</span>
+<a class="text-xs font-semibold text-gray-800 hover:text-blue-900 leading-snug pt-1" href="#">
+                National Lok Adalat: 61,367 Cases Settled in a Single Day in Udupi
+              </a>
+</li>
+</ol>
+</div>
+</div>
+</section>
+<!-- END: RankedListsSection -->
+</main>
+<!-- END: MainContentContainer -->
+<!-- BEGIN: SiteFooter -->
+<footer class="nav-dark-blue text-gray-300 mt-12 pt-10 pb-6 border-t-4 border-yellow-500">
+<div class="max-w-[1240px] mx-auto px-4">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-8 pb-10 border-b border-blue-900 text-xs">
+<!-- Col 1: News -->
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-3 text-sm">News</h4>
+<ul class="space-y-2">
+<li><a class="hover:text-yellow-400" href="#">Home</a></li>
+<li><a class="hover:text-yellow-400" href="#">Gangolli</a></li>
+<li><a class="hover:text-yellow-400" href="#">Kundapura</a></li>
+<li><a class="hover:text-yellow-400" href="#">Udupi</a></li>
+<li><a class="hover:text-yellow-400" href="#">Education</a></li>
+<li><a class="hover:text-yellow-400" href="#">Top News</a></li>
+</ul>
+</div>
+<!-- Col 2: Opinion -->
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-3 text-sm">Opinion</h4>
+<ul class="space-y-2">
+<li><a class="hover:text-yellow-400" href="#">Articles</a></li>
+<li><a class="hover:text-yellow-400" href="#">Search</a></li>
+</ul>
+</div>
+<!-- Col 3: More -->
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-3 text-sm">More</h4>
+<ul class="space-y-2">
+<li><a class="hover:text-yellow-400" href="#">About us</a></li>
+<li><a class="hover:text-yellow-400" href="#">Contact us</a></li>
+<li><a class="hover:text-yellow-400" href="#">Local Services</a></li>
+<li><a class="hover:text-yellow-400" href="#">Grievance Redressal</a></li>
+<li><a class="hover:text-yellow-400" href="#">Corrections</a></li>
+<li><a class="hover:text-yellow-400" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-yellow-400" href="#">Code of ethics</a></li>
+<li><a class="hover:text-yellow-400" href="#">Terms &amp; conditions</a></li>
+<li><a class="hover:text-yellow-400" href="#">Disclaimer</a></li>
+</ul>
+</div>
+<!-- Col 4 & 5: Join Community & Socials -->
+<div class="col-span-2 space-y-4">
+<div>
+<h4 class="text-white font-bold uppercase tracking-wider mb-2 text-sm">Join WhatsApp Channel</h4>
+<p class="text-xs text-gray-300 mb-3">Stay updated with latest breaking news and stories from coastal Karnataka delivered instantly.</p>
+<a class="brand-yellow text-blue-950 font-bold px-4 py-1.5 rounded text-xs uppercase tracking-wide inline-flex items-center" href="#">
+              JOIN US <i class="fa-solid fa-arrow-right ml-1"></i>
+</a>
+</div>
+<div class="pt-2">
+<h4 class="text-white font-bold uppercase tracking-wider mb-2 text-xs">Follow Us</h4>
+<div class="flex space-x-3 text-base text-gray-300">
+<a class="w-8 h-8 rounded-full bg-blue-900 flex items-center justify-center hover:text-white hover:bg-blue-800" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+<a class="w-8 h-8 rounded-full bg-blue-900 flex items-center justify-center hover:text-white hover:bg-blue-800" href="#"><i class="fa-brands fa-x-twitter"></i></a>
+<a class="w-8 h-8 rounded-full bg-blue-900 flex items-center justify-center hover:text-white hover:bg-blue-800" href="#"><i class="fa-brands fa-telegram"></i></a>
+<a class="w-8 h-8 rounded-full bg-blue-900 flex items-center justify-center hover:text-white hover:bg-blue-800" href="#"><i class="fa-solid fa-globe"></i></a>
+<a class="w-8 h-8 rounded-full bg-blue-900 flex items-center justify-center hover:text-white hover:bg-blue-800" href="#"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</div>
+</div>
+</div>
+<!-- Legal and Copyright bar -->
+<div class="pt-6 flex flex-col md:flex-row justify-between items-center text-[11px] text-gray-400 gap-4">
+<div class="flex flex-wrap justify-center md:justify-start gap-x-3 gap-y-1">
+<a class="hover:underline" href="#">Contact us</a>
+<span>•</span>
+<a class="hover:underline" href="#">Local Services</a>
+<span>•</span>
+<a class="hover:underline" href="#">Grievance Redressal</a>
+<span>•</span>
+<a class="hover:underline" href="#">Corrections</a>
+<span>•</span>
+<a class="hover:underline" href="#">Privacy Policy</a>
+<span>•</span>
+<a class="hover:underline" href="#">Code of ethics</a>
+<span>•</span>
+<a class="hover:underline" href="#">Terms &amp; conditions</a>
+<span>•</span>
+<a class="hover:underline" href="#">Disclaimer</a>
+</div>
+<div class="flex items-center space-x-2">
+<span>© 2024 Gangolli News Network</span>
+<span class="w-5 h-5 rounded-full bg-yellow-400 text-blue-950 font-bold flex items-center justify-center text-[10px] cursor-pointer" title="Back to top">
+<i class="fa-solid fa-arrow-up"></i>
+</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+</body></html>
