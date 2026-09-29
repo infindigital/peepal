@@ -49,3 +49,35 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Editorial polish */
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+h1, h2, h3, h4 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* Headline links: animated underline on hover */
+main h1 a, main h3 a, main h4 a, main ol a {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1px;
+  transition: background-size 0.25s ease, color 0.2s ease;
+}
+main h1 a:hover, main h3 a:hover, main h4 a:hover, main ol a:hover {
+  background-size: 100% 1px;
+}
+
+/* Story images: soft hover feedback */
+main article img {
+  transition: opacity 0.2s ease, transform 0.35s ease;
+}
+main article:hover img {
+  opacity: 0.92;
+}
