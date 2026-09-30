@@ -5,108 +5,91 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>ಸೌಜನ್ಯಾ ಪ್ರಕರಣ: ಎಸ್‌ಐಟಿಯಿಂದ ಕೈಬಿಡುವಂತೆ ಸರ್ಕಾರಕ್ಕೆ ಎಎಸ್‌ಪಿ ವೆಂಕಟೇಶ್ ಪ್ರಸನ್ನ ಮನವಿ - ಗಂಗೊಳ್ಳಿ ನ್ಯೂಸ್</title>
 <meta content="ಸೌಜನ್ಯಾ ಅತ್ಯಾಚಾರ ಮತ್ತು ಕೊಲೆ ಪ್ರಕರಣದ ತನಿಖೆ ನಡೆಸುತ್ತಿರುವ ಎಸ್‌ಐಟಿಯಿಂದ ತಮ್ಮನ್ನು ಕೈಬಿಡುವಂತೆ ಎಎಸ್‌ಪಿ ವೆಂಕಟೇಶ್ ಪ್ರಸನ್ನ ಸರ್ಕಾರಕ್ಕೆ ಮನವಿ ಮಾಡಿದ್ದಾರೆ." name="description"/>
+<!-- Font Awesome for Editorial & Interface Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
 <!-- Site styles (compiled Tailwind + custom styles) -->
 <link href="css/style.css" rel="stylesheet"/>
 <!-- Article page scripts -->
+<script defer src="js/main.js"></script>
 <script defer src="js/article.js"></script>
 </head>
-<body class="article-page bg-white text-gray-900 antialiased">
+<body class="article-page bg-white text-gray-900 font-body antialiased">
+<!-- Site header (shared with the homepage) -->
+<!-- BEGIN: TopUtilityBar -->
+<header class="bg-white border-b border-gray-200 text-[13px] text-gray-600">
+<div class="max-w-[1240px] mx-auto px-4 py-1.5 flex justify-between items-center">
+<!-- Left: Timestamp -->
+<div class="flex items-center space-x-3">
+<span id="site-timestamp" class="font-medium text-gray-700">ಮಂಗಳವಾರ, 24 ಸೆಪ್ಟೆಂಬರ್ 2024 | ರಾತ್ರಿ 08:30 IST</span>
+</div>
+<!-- Right: Utility Links -->
+<div class="flex items-center space-x-4">
+<button class="flex items-center hover:text-blue-700 text-gray-700">
+<i class="fa-solid fa-magnifying-glass mr-1"></i>
+</button>
+<button class="flex items-center hover:text-blue-700 text-gray-700">
+<i class="fa-regular fa-bell mr-1"></i>
+</button>
+<button class="flex items-center hover:text-blue-700 text-gray-700">
+<i class="fa-solid fa-cloud-sun mr-1"></i>
+<span>ವಾಯು ಗುಣಮಟ್ಟ 34</span>
+</button>
+<a class="flex items-center text-gray-700 hover:text-blue-800 font-medium" href="#">
+<i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> ಸೈನ್ ಇನ್
+        </a>
+</div>
+</div>
+</header>
+<!-- END: TopUtilityBar -->
+<!-- BEGIN: BrandMasthead -->
+<div class="bg-white py-3 border-b border-gray-200">
+<div class="max-w-[1240px] mx-auto px-4 flex justify-between items-center">
+<!-- Sections Selector -->
+<div>
+<button class="border border-blue-900 bg-white hover:bg-gray-50 text-blue-950 font-bold px-3 py-1.5 rounded text-[14px] inline-flex items-center">
+<i class="fa-solid fa-bars mr-1.5"></i> ಎಲ್ಲಾ ವಿಭಾಗಗಳು
+        </button>
+</div>
+<!-- Main Newspaper Masthead Title -->
+<div class="text-center">
+<a class="inline-block" href="index.html">
+<img alt="ಕನ್ನಡ ಪ್ಲಾನೆಟ್" class="h-10 sm:h-14 md:h-16 w-auto mx-auto" height="200" src="img/logo-kpl-web.png" width="1308"/>
+</a>
+</div>
+<!-- CTA Join Button -->
+<div>
+<a class="brand-yellow text-blue-950 font-bold px-4 py-1.5 rounded-full text-[14px] uppercase tracking-wide inline-flex items-center shadow-sm" href="#">
+          ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+</a>
+</div>
+</div>
+</div>
+<!-- END: BrandMasthead -->
+<!-- BEGIN: PrimaryNavigation -->
+<nav class="nav-dark-blue sticky top-0 z-50 text-white shadow-md">
+<div class="max-w-[1240px] mx-auto px-4 flex items-center justify-between overflow-x-auto scrollbar-none text-[16px] font-semibold tracking-wide">
+<div class="flex items-center whitespace-nowrap">
+<a class="py-2.5 px-3 hover-nav-dark flex items-center" href="index.html"><i class="fa-solid fa-house mr-1"></i> ಮುಖಪುಟ</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">ಪ್ರಮುಖ ಸುದ್ದಿ</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">ಗಂಗೊಳ್ಳಿ</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">ಕುಂದಾಪುರ</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">ಉಡುಪಿ</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">ಭಟ್ಕಳ</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">ಮಂಗಳೂರು</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">ಲೇಖನಗಳು</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">ಕರ್ನಾಟಕ ರಾಜಕೀಯ</a>
+<a class="py-2.5 px-3 hover-nav-dark" href="#">ಕ್ರೀಡೆ</a>
+</div>
+</div>
+</nav>
+<!-- END: PrimaryNavigation -->
 
 <!-- ================================================================== -->
 <!-- ========================== DESKTOP VIEW ========================== -->
 <!-- ================================================================== -->
 <div class="hidden md:flex flex-col justify-between min-h-screen font-body" data-purpose="desktop-view">
-<!-- BEGIN: TopHeader -->
-<header class="bg-[#092243] text-white">
-<!-- Masthead & Utility Bar -->
-<div class="relative max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between border-b border-[#1b365d]">
-<!-- Left side: Date & Dropdown -->
-<div class="flex items-center space-x-3 text-xs tracking-tight text-gray-300">
-<span class="hidden lg:inline font-normal text-xs" data-live-time="">Wed, 30 Sept, 2026 | 08.53pm IST</span>
-<button class="bg-[#12315a] hover:bg-[#194073] text-white text-[11px] font-medium py-1 px-3 rounded flex items-center gap-1 transition">
-<span>ಎಲ್ಲಾ ವಿಭಾಗಗಳು</span>
-<svg class="w-3 h-3 ml-0.5 fill-current opacity-80" viewBox="0 0 20 20">
-<path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"></path>
-</svg>
-</button>
-</div>
-<!-- Center: Masthead Logo -->
-<div class="text-center absolute left-1/2 transform -translate-x-1/2">
-<a class="gn-masthead text-3xl lg:text-5xl font-extrabold tracking-tight text-white hover:opacity-95 transition" href="index.html">
-          ಗಂಗೊಳ್ಳಿ ನ್ಯೂಸ್
-        </a>
-</div>
-<!-- Right side: Tools & Authentication -->
-<div class="flex items-center space-x-3">
-<!-- Search Icon -->
-<button aria-label="ಹುಡುಕಿ" class="p-1.5 hover:text-yellow-400 text-gray-300 transition">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-<!-- Notification Bell -->
-<button aria-label="ಅಧಿಸೂಚನೆಗಳು" class="p-1.5 hover:text-yellow-400 text-gray-300 transition">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-<!-- Dark/Night Mode Toggle -->
-<button aria-label="ಡಾರ್ಕ್ ಮೋಡ್" class="p-1.5 hover:text-yellow-400 text-gray-300 transition">
-<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-</button>
-<!-- Language Switch -->
-<a class="hidden lg:flex bg-[#12315a] hover:bg-[#1a4073] px-2.5 py-1 rounded text-xs text-gray-200 items-center space-x-1 transition font-medium" href="#" lang="en">
-<span>English</span>
-<svg class="w-3 h-3 ml-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
-</svg>
-</a>
-<!-- Sign In -->
-<a class="hidden lg:flex text-xs text-gray-200 hover:text-white items-center font-medium pl-1" href="#">
-<svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-</svg>
-<span>ಸೈನ್ ಇನ್</span>
-</a>
-<!-- Yellow Join Us CTA Button -->
-<a class="bg-[#f0c20c] hover:bg-yellow-400 text-slate-950 font-bold text-xs px-3.5 py-1.5 rounded-full flex items-center shadow transition-transform active:scale-95" href="#">
-<span>ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ</span>
-<svg class="w-3.5 h-3.5 ml-1 font-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-<path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
-</svg>
-</a>
-</div>
-</div>
-<!-- Navigation Menu Bar -->
-<nav class="bg-[#0b284e] shadow-sm">
-<div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-<ul class="flex items-center space-x-8 text-xs md:text-sm font-medium text-gray-200 overflow-x-auto py-2.5 whitespace-nowrap custom-scroll">
-<li>
-<a class="hover:text-yellow-400 flex items-center text-white font-semibold" href="index.html">
-<svg class="w-4 h-4 mr-1 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-<path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>
-</svg>
-              ಮುಖಪುಟ
-            </a>
-</li>
-<li><a class="hover:text-yellow-400 transition" href="#">ಪ್ರಮುಖ ಸುದ್ದಿ</a></li>
-<li><a class="hover:text-yellow-400 transition" href="#">ಗಂಗೊಳ್ಳಿ</a></li>
-<li><a class="hover:text-yellow-400 transition" href="#">ಕುಂದಾಪುರ</a></li>
-<li><a class="hover:text-yellow-400 transition" href="#">ಉಡುಪಿ</a></li>
-<li><a class="hover:text-yellow-400 transition" href="#">ಭಟ್ಕಳ</a></li>
-<li><a class="hover:text-yellow-400 transition" href="#">ಮಂಗಳೂರು</a></li>
-<li><a class="hover:text-yellow-400 transition" href="#">ಲೇಖನಗಳು</a></li>
-<li><a class="hover:text-yellow-400 transition" href="#">ಕರ್ನಾಟಕ ರಾಜಕೀಯ</a></li>
-<li><a class="hover:text-yellow-400 transition" href="#">ಕ್ರೀಡೆ</a></li>
-</ul>
-</div>
-</nav>
-</header>
-<!-- END: TopHeader -->
 <!-- BEGIN: MainEditorialContainer -->
-<main class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 w-full flex-grow">
+<main class="max-w-[1240px] mx-auto px-4 py-6 w-full flex-grow">
 <div class="grid grid-cols-12 gap-8">
 <!-- ================= LEFT SIDEBAR ================= -->
 <!-- BEGIN: LeftSidebar -->
@@ -417,7 +400,7 @@
 <!-- END: MainEditorialContainer -->
 <!-- BEGIN: MainFooter -->
 <footer class="bg-[#092243] text-white pt-12 pb-6 border-t border-[#133560] relative" data-purpose="site-footer">
-<div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+<div class="max-w-[1240px] mx-auto px-4">
 <!-- 4 Columns Footer Layout -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 pb-10 border-b border-[#1b3d6a]">
 <!-- Column 1: News -->
@@ -539,69 +522,6 @@
 <!-- ========================== MOBILE VIEW =========================== -->
 <!-- ================================================================== -->
 <div class="md:hidden font-body text-gray-900 bg-white min-h-screen relative pb-10" data-purpose="mobile-view">
-<!-- BEGIN: TopBar -->
-<aside class="bg-[#081C33] text-gray-200 px-3 py-1.5 flex items-center justify-between text-[11px] font-body" data-purpose="top-utility-bar">
-<div class="tracking-tight text-gray-300" data-live-time="">
-      Wed, 30 Sept, 2026 | 09.07pm IST
-    </div>
-<div class="flex items-center space-x-2.5">
-<!-- Search Icon -->
-<button aria-label="ಹುಡುಕಿ" class="hover:text-white transition">
-<svg class="w-3.5 h-3.5 stroke-current fill-none" stroke-width="2" viewBox="0 0 24 24">
-<circle cx="11" cy="11" r="7"></circle>
-<line x1="16.5" x2="21" y1="16.5" y2="21"></line>
-</svg>
-</button>
-<!-- Notification Icon -->
-<button aria-label="ಅಧಿಸೂಚನೆಗಳು" class="hover:text-white transition">
-<svg class="w-3.5 h-3.5 stroke-current fill-none" stroke-width="2" viewBox="0 0 24 24">
-<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-<path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-</svg>
-</button>
-<!-- Dark Mode Moon Icon -->
-<button aria-label="ಡಾರ್ಕ್ ಮೋಡ್" class="hover:text-white transition">
-<svg class="w-3.5 h-3.5 stroke-current fill-none" stroke-width="2" viewBox="0 0 24 24">
-<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-</svg>
-</button>
-<!-- Language Switcher Pill -->
-<a class="inline-flex items-center bg-transparent border border-gray-400 text-white px-2 py-0.5 rounded-full text-[10px] font-medium leading-none hover:bg-white/10 transition" href="#" lang="en">
-<span>English</span>
-<span class="ml-1 text-[9px]">➔</span>
-</a>
-</div>
-</aside>
-<!-- END: TopBar -->
-<!-- BEGIN: MainHeader -->
-<header class="bg-[#0B2341] px-4 py-3 flex items-center justify-between sticky top-0 z-40 shadow-md" data-purpose="site-header">
-<!-- Brand Logo / Masthead -->
-<a class="masthead-title text-white text-[27px] font-bold tracking-normal leading-none select-none" href="index.html">
-      ಗಂಗೊಳ್ಳಿ ನ್ಯೂಸ್
-    </a>
-<!-- Mobile Menu Trigger -->
-<button aria-controls="mobile-menu" aria-expanded="false" aria-label="ಮೆನು ತೆರೆಯಿರಿ" class="bg-[#F9DF15] w-9 h-9 rounded-md flex flex-col justify-center items-center space-y-1 p-1.5 focus:outline-none" data-menu-toggle="">
-<span class="w-5 h-0.5 bg-black rounded-full"></span>
-<span class="w-5 h-0.5 bg-black rounded-full"></span>
-<span class="w-5 h-0.5 bg-black rounded-full"></span>
-</button>
-<!-- Mobile Menu Panel -->
-<nav class="hidden absolute left-0 right-0 top-full bg-[#0B2341] border-t border-white/10 shadow-lg" id="mobile-menu">
-<ul class="divide-y divide-white/10 text-sm font-semibold text-gray-100">
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="index.html">ಮುಖಪುಟ</a></li>
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="#">ಪ್ರಮುಖ ಸುದ್ದಿ</a></li>
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="#">ಗಂಗೊಳ್ಳಿ</a></li>
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="#">ಕುಂದಾಪುರ</a></li>
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="#">ಉಡುಪಿ</a></li>
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="#">ಭಟ್ಕಳ</a></li>
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="#">ಮಂಗಳೂರು</a></li>
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="#">ಲೇಖನಗಳು</a></li>
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="#">ಕರ್ನಾಟಕ ರಾಜಕೀಯ</a></li>
-<li><a class="block px-4 py-2.5 hover:bg-white/5" href="#">ಕ್ರೀಡೆ</a></li>
-</ul>
-</nav>
-</header>
-<!-- END: MainHeader -->
 <!-- BEGIN: HeroImage -->
 <div class="w-full bg-gray-200" data-purpose="featured-image">
 <img alt="ಸೌಜನ್ಯಾ ಭಾವಚಿತ್ರ ಮತ್ತು ಪೊಲೀಸ್ ಅಧಿಕಾರಿ" class="w-full h-auto object-cover block" src="https://kannadaplanet.com/wp-content/uploads/2026/09/WhatsApp-Image-2026-09-30-at-8.11.16-PM.webp"/>
