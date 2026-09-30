@@ -178,17 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Mobile menu
-  const menuToggle = document.querySelector('[data-menu-toggle]');
-  const menu = document.getElementById('mobile-menu');
-  if (menuToggle && menu) {
-    menuToggle.addEventListener('click', () => {
-      const open = menu.classList.toggle('hidden') === false;
-      menuToggle.setAttribute('aria-expanded', String(open));
-      menuToggle.setAttribute('aria-label', open ? 'ಮೆನು ಮುಚ್ಚಿ' : 'ಮೆನು ತೆರೆಯಿರಿ');
-    });
-  }
-
   // Most viewed tabs (mobile)
   const tabs = document.querySelectorAll('[data-tab]');
   tabs.forEach((tab) => {

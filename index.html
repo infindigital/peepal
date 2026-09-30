@@ -14,59 +14,88 @@
 <body class="bg-gray-100 text-gray-800 font-body antialiased selection:bg-yellow-200">
 <!-- BEGIN: TopUtilityBar -->
 <header class="bg-white border-b border-gray-200 text-[13px] text-gray-600">
-<div class="max-w-[1240px] mx-auto px-4 py-1.5 flex justify-between items-center">
+<div class="max-w-[1240px] mx-auto px-4 py-1.5 flex justify-between items-center gap-3">
 <!-- Left: Timestamp -->
-<div class="flex items-center space-x-3">
-<span id="site-timestamp" class="font-medium text-gray-700">ಮಂಗಳವಾರ, 24 ಸೆಪ್ಟೆಂಬರ್ 2024 | ರಾತ್ರಿ 08:30 IST</span>
+<div class="flex items-center min-w-0">
+<span id="site-timestamp" class="font-medium text-gray-700 truncate">ಮಂಗಳವಾರ, 24 ಸೆಪ್ಟೆಂಬರ್ 2024 | ರಾತ್ರಿ 08:30 IST</span>
 </div>
-<!-- Right: Utility Links -->
-<div class="flex items-center space-x-4">
-<button class="flex items-center hover:text-blue-700 text-gray-700">
-<i class="fa-solid fa-magnifying-glass mr-1"></i>
+<!-- Right: Utility Links (icons only on phones) -->
+<div class="flex items-center space-x-3 md:space-x-4 shrink-0">
+<button aria-label="ಹುಡುಕಿ" class="flex items-center hover:text-blue-700 text-gray-700">
+<i class="fa-solid fa-magnifying-glass md:mr-1"></i>
 </button>
-<button class="flex items-center hover:text-blue-700 text-gray-700">
-<i class="fa-regular fa-bell mr-1"></i>
+<button aria-label="ಅಧಿಸೂಚನೆಗಳು" class="flex items-center hover:text-blue-700 text-gray-700">
+<i class="fa-regular fa-bell md:mr-1"></i>
 </button>
-<button class="flex items-center hover:text-blue-700 text-gray-700">
-<i class="fa-solid fa-cloud-sun mr-1"></i>
-<span>ವಾಯು ಗುಣಮಟ್ಟ 34</span>
+<button aria-label="ವಾಯು ಗುಣಮಟ್ಟ 34" class="flex items-center hover:text-blue-700 text-gray-700">
+<i class="fa-solid fa-cloud-sun md:mr-1"></i>
+<span class="hidden md:inline">ವಾಯು ಗುಣಮಟ್ಟ 34</span>
 </button>
-<a class="flex items-center text-gray-700 hover:text-blue-800 font-medium" href="#">
-<i class="fa-solid fa-arrow-right-to-bracket mr-1"></i> ಸೈನ್ ಇನ್
-        </a>
+<a aria-label="ಸೈನ್ ಇನ್" class="flex items-center text-gray-700 hover:text-blue-800 font-medium" href="#">
+<i class="fa-solid fa-arrow-right-to-bracket md:mr-1"></i><span class="hidden md:inline"> ಸೈನ್ ಇನ್</span>
+</a>
 </div>
 </div>
 </header>
 <!-- END: TopUtilityBar -->
 <!-- BEGIN: BrandMasthead -->
-<div class="bg-white py-3 border-b border-gray-200">
-<div class="max-w-[1240px] mx-auto px-4 flex justify-between items-center">
-<!-- Sections Selector -->
-<div>
+<div class="bg-white py-2.5 md:py-3 border-b border-gray-200">
+<div class="max-w-[1240px] mx-auto px-4 flex justify-between items-center gap-3">
+<!-- Sections Selector (tablet and desktop) -->
+<div class="hidden md:block shrink-0">
 <button class="border border-blue-900 bg-white hover:bg-gray-50 text-blue-950 font-bold px-3 py-1.5 rounded text-[14px] inline-flex items-center">
 <i class="fa-solid fa-bars mr-1.5"></i> ಎಲ್ಲಾ ವಿಭಾಗಗಳು
         </button>
 </div>
 <!-- Main Newspaper Masthead Title -->
-<div class="text-center">
+<div class="min-w-0 md:text-center">
 <a class="inline-block" href="index.html">
-<img alt="ಕನ್ನಡ ಪ್ಲಾನೆಟ್" class="h-10 sm:h-14 md:h-16 w-auto mx-auto" height="200" src="img/logo-kpl-web.png" width="1308"/>
+<img alt="ಕನ್ನಡ ಪ್ಲಾನೆಟ್" class="h-9 sm:h-11 md:h-12 lg:h-16 w-auto md:mx-auto" height="200" src="img/logo-kpl-web.png" width="1308"/>
 </a>
 </div>
-<!-- CTA Join Button -->
-<div>
+<!-- CTA Join Button (tablet and desktop) -->
+<div class="hidden md:block shrink-0">
 <a class="brand-yellow text-blue-950 font-bold px-4 py-1.5 rounded-full text-[14px] uppercase tracking-wide inline-flex items-center shadow-sm" href="#">
           ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
 </a>
 </div>
+<!-- Menu button (phones) -->
+<button aria-controls="site-menu" aria-expanded="false" aria-label="ಮೆನು ತೆರೆಯಿರಿ" class="md:hidden brand-yellow text-blue-950 w-10 h-10 rounded-md flex items-center justify-center shrink-0 text-lg shadow-sm" data-site-menu-toggle="" type="button">
+<span data-site-menu-open=""><i class="fa-solid fa-bars"></i></span>
+<span class="hidden" data-site-menu-close=""><i class="fa-solid fa-xmark"></i></span>
+</button>
 </div>
+<!-- Phone menu panel -->
+<nav class="md:hidden hidden border-t border-gray-200 bg-white" id="site-menu">
+<ul class="max-w-[1240px] mx-auto px-4 py-2 grid grid-cols-2 gap-x-4 text-[16px] font-semibold text-blue-950">
+<li><a class="block py-2 border-b border-gray-100" href="index.html"><i class="fa-solid fa-house mr-1.5 text-sm"></i>ಮುಖಪುಟ</a></li>
+<li><a class="block py-2 border-b border-gray-100" href="#">ಪ್ರಮುಖ ಸುದ್ದಿ</a></li>
+<li><a class="block py-2 border-b border-gray-100" href="#">ಗಂಗೊಳ್ಳಿ</a></li>
+<li><a class="block py-2 border-b border-gray-100" href="#">ಕುಂದಾಪುರ</a></li>
+<li><a class="block py-2 border-b border-gray-100" href="#">ಉಡುಪಿ</a></li>
+<li><a class="block py-2 border-b border-gray-100" href="#">ಭಟ್ಕಳ</a></li>
+<li><a class="block py-2 border-b border-gray-100" href="#">ಮಂಗಳೂರು</a></li>
+<li><a class="block py-2 border-b border-gray-100" href="#">ಲೇಖನಗಳು</a></li>
+<li><a class="block py-2 border-b border-gray-100" href="#">ಕರ್ನಾಟಕ ರಾಜಕೀಯ</a></li>
+<li><a class="block py-2 border-b border-gray-100" href="#">ಕ್ರೀಡೆ</a></li>
+</ul>
+<div class="max-w-[1240px] mx-auto px-4 pb-3 pt-1 flex items-center gap-3">
+<a class="brand-yellow text-blue-950 font-bold px-4 py-2 rounded-full text-[14px] inline-flex items-center justify-center flex-1 shadow-sm" href="#">
+          ನಮ್ಮೊಂದಿಗೆ ಸೇರಿ <i class="fa-solid fa-arrow-right ml-1 text-xs"></i>
+</a>
+<a class="border border-blue-900 text-blue-950 font-bold px-4 py-2 rounded-full text-[14px] inline-flex items-center justify-center flex-1" href="#">
+<i class="fa-solid fa-arrow-right-to-bracket mr-1.5"></i> ಸೈನ್ ಇನ್
+</a>
+</div>
+</nav>
 </div>
 <!-- END: BrandMasthead -->
 <!-- BEGIN: PrimaryNavigation -->
 <nav class="nav-dark-blue sticky top-0 z-50 text-white shadow-md">
-<div class="max-w-[1240px] mx-auto px-4 flex items-center justify-between overflow-x-auto scrollbar-none text-[16px] font-semibold tracking-wide">
+<div class="relative max-w-[1240px] mx-auto">
+<div class="px-1 md:px-4 flex items-center justify-between overflow-x-auto scrollbar-none text-[15px] md:text-[16px] font-semibold tracking-wide">
 <div class="flex items-center whitespace-nowrap">
-<a class="py-2.5 px-3 hover-nav-dark flex items-center" href="#"><i class="fa-solid fa-house mr-1"></i> ಮುಖಪುಟ</a>
+<a class="py-2.5 px-3 hover-nav-dark flex items-center" href="index.html"><i class="fa-solid fa-house mr-1"></i> ಮುಖಪುಟ</a>
 <a class="py-2.5 px-3 hover-nav-dark" href="#">ಪ್ರಮುಖ ಸುದ್ದಿ</a>
 <a class="py-2.5 px-3 hover-nav-dark" href="#">ಗಂಗೊಳ್ಳಿ</a>
 <a class="py-2.5 px-3 hover-nav-dark" href="#">ಕುಂದಾಪುರ</a>
@@ -75,8 +104,11 @@
 <a class="py-2.5 px-3 hover-nav-dark" href="#">ಮಂಗಳೂರು</a>
 <a class="py-2.5 px-3 hover-nav-dark" href="#">ಲೇಖನಗಳು</a>
 <a class="py-2.5 px-3 hover-nav-dark" href="#">ಕರ್ನಾಟಕ ರಾಜಕೀಯ</a>
-<a class="py-2.5 px-3 hover-nav-dark" href="#">ಕ್ರೀಡೆ</a>
+<a class="py-2.5 px-3 hover-nav-dark pr-8 lg:pr-3" href="#">ಕ್ರೀಡೆ</a>
 </div>
+</div>
+<!-- Fade that hints the menu scrolls sideways (phones and tablets) -->
+<div aria-hidden="true" class="nav-fade lg:hidden pointer-events-none absolute inset-y-0 right-0 w-10"></div>
 </div>
 </nav>
 <!-- END: PrimaryNavigation -->
