@@ -132,3 +132,13 @@ main article:hover img {
   border-color: #fca5a5;
   background-color: #fef2f2;
 }
+/* Text size slider: larger touch target and visible focus */
+.article-page [data-font-track]::before {
+  content: '';
+  position: absolute;
+  inset: -12px -6px;
+}
+.article-page [data-font-track]:focus-visible {
+  outline: 2px solid #1e3a8a;
+  outline-offset: 6px;
+}

@@ -90,27 +90,83 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Text size controls
-  const scales = [0.88, 0.94, 1, 1.12, 1.25];
-  let scaleIndex = 2;
+  // Text size controls: drag or click the slider, use the -T/+T buttons,
+  // or focus the slider and use the arrow keys. Every slider stays in sync.
+  const MIN_SCALE = 0.85;
+  const MAX_SCALE = 1.5;
+  const STEP = 0.05;
+  const scaleKey = 'gn-article-text-scale';
   const bodies = document.querySelectorAll('[data-article-body]');
-  const knobs = document.querySelectorAll('[data-font-knob]');
-  const applyScale = () => {
+  const tracks = document.querySelectorAll('[data-font-track]');
+  const clampScale = (value) => Math.min(MAX_SCALE, Math.max(MIN_SCALE, value));
+  let scale = 1;
+  try {
+    const saved = Number(localStorage.getItem(scaleKey));
+    if (saved) scale = clampScale(saved);
+  } catch (err) { /* storage unavailable */ }
+
+  const applyScale = (save = true) => {
+    const ratio = (scale - MIN_SCALE) / (MAX_SCALE - MIN_SCALE);
     bodies.forEach((el) => {
-      el.style.fontSize = `${(Number(el.dataset.baseSize) * scales[scaleIndex]).toFixed(2)}px`;
+      el.style.fontSize = `${(Number(el.dataset.baseSize) * scale).toFixed(2)}px`;
     });
-    knobs.forEach((knob) => {
-      const track = knob.parentElement.clientWidth - knob.offsetWidth;
-      knob.style.left = `${(track * scaleIndex) / (scales.length - 1)}px`;
-      knob.style.marginLeft = '0';
+    tracks.forEach((track) => {
+      const knob = track.querySelector('[data-font-knob]');
+      const fill = track.querySelector('[data-font-fill]');
+      const x = ratio * track.clientWidth;
+      knob.style.left = `${x - knob.offsetWidth / 2}px`;
+      if (fill) fill.style.width = `${x}px`;
+      track.setAttribute('aria-valuemin', String(Math.round(MIN_SCALE * 100)));
+      track.setAttribute('aria-valuemax', String(Math.round(MAX_SCALE * 100)));
+      track.setAttribute('aria-valuenow', String(Math.round(scale * 100)));
+      track.setAttribute('aria-valuetext', `${Math.round(scale * 100)}%`);
     });
+    if (save) {
+      try { localStorage.setItem(scaleKey, String(scale)); } catch (err) { /* storage unavailable */ }
+    }
   };
-  document.querySelectorAll('[data-font-step]').forEach((button) => {
-    button.addEventListener('click', () => {
-      scaleIndex = Math.min(scales.length - 1, Math.max(0, scaleIndex + Number(button.dataset.fontStep)));
+
+  const scaleFromPointer = (track, clientX) => {
+    const rect = track.getBoundingClientRect();
+    const ratio = Math.min(1, Math.max(0, (clientX - rect.left) / rect.width));
+    scale = clampScale(MIN_SCALE + ratio * (MAX_SCALE - MIN_SCALE));
+    applyScale();
+  };
+
+  tracks.forEach((track) => {
+    track.addEventListener('pointerdown', (event) => {
+      event.preventDefault();
+      track.setPointerCapture(event.pointerId);
+      track.focus();
+      scaleFromPointer(track, event.clientX);
+    });
+    track.addEventListener('pointermove', (event) => {
+      if (track.hasPointerCapture(event.pointerId)) scaleFromPointer(track, event.clientX);
+    });
+    track.addEventListener('keydown', (event) => {
+      const keys = { ArrowRight: STEP, ArrowUp: STEP, ArrowLeft: -STEP, ArrowDown: -STEP };
+      if (event.key in keys) {
+        scale = clampScale(scale + keys[event.key]);
+      } else if (event.key === 'Home') {
+        scale = MIN_SCALE;
+      } else if (event.key === 'End') {
+        scale = MAX_SCALE;
+      } else {
+        return;
+      }
+      event.preventDefault();
       applyScale();
     });
   });
+  document.querySelectorAll('[data-font-step]').forEach((button) => {
+    button.addEventListener('click', () => {
+      scale = clampScale(scale + Number(button.dataset.fontStep) * STEP * 2);
+      applyScale();
+    });
+  });
+  // Place the knobs once layout is known, and again if the layout switches
+  applyScale(false);
+  window.addEventListener('resize', () => applyScale(false));
 
   // Comment forms (moderated - no public posting yet)
   document.querySelectorAll('[data-comment-form]').forEach((form) => {
