@@ -79,3 +79,61 @@ main article img {
 main article:hover img {
   opacity: 0.92;
 }
+
+/* ------------------------------------------------------------------ */
+/* Article page (article.html)                                         */
+/* ------------------------------------------------------------------ */
+body.article-page {
+  line-height: 1.5;
+}
+/* Desktop typography */
+.gn-masthead {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.5px;
+}
+.font-article-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  line-height: 1.18;
+}
+.font-article-body {
+  font-family: 'Lora', Georgia, serif;
+  line-height: 1.8;
+  font-size: 1.0625rem;
+}
+/* Mobile typography */
+.font-serif-headline,
+.masthead-title {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.masthead-title {
+  letter-spacing: -0.5px;
+}
+.article-page [data-purpose="mobile-view"] {
+  -webkit-tap-highlight-color: transparent;
+}
+/* Scrollbars */
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 2px;
+}
+.custom-scroll-hidden::-webkit-scrollbar {
+  display: none;
+}
+.custom-scroll-hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+/* Active states for bookmark and rating buttons */
+.article-page [data-bookmark][aria-pressed="true"] svg {
+  fill: currentColor;
+}
+.article-page [data-bookmark][aria-pressed="true"],
+.article-page [data-rate][aria-pressed="true"] {
+  color: #b91c1c;
+  border-color: #fca5a5;
+  background-color: #fef2f2;
+}
