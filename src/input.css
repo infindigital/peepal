@@ -83,30 +83,25 @@ main article:hover img {
 /* ------------------------------------------------------------------ */
 /* Article page (article.html)                                         */
 /* ------------------------------------------------------------------ */
-body.article-page {
-  line-height: 1.5;
+/* Article typography: Baloo Tamma 2, same as the homepage */
+.gn-masthead,
+.masthead-title,
+.font-article-title,
+.font-serif-headline,
+.font-article-body {
+  font-family: 'Baloo Tamma 2', 'Noto Sans Kannada', system-ui, sans-serif;
 }
-/* Desktop typography */
-.gn-masthead {
-  font-family: 'Playfair Display', Georgia, serif;
-  letter-spacing: -0.5px;
+.gn-masthead,
+.masthead-title {
+  letter-spacing: -0.3px;
+  line-height: 1.2;
 }
 .font-article-title {
-  font-family: 'Playfair Display', Georgia, serif;
-  line-height: 1.18;
+  line-height: 1.3;
 }
 .font-article-body {
-  font-family: 'Lora', Georgia, serif;
   line-height: 1.8;
   font-size: 1.0625rem;
-}
-/* Mobile typography */
-.font-serif-headline,
-.masthead-title {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.masthead-title {
-  letter-spacing: -0.5px;
 }
 .article-page [data-purpose="mobile-view"] {
   -webkit-tap-highlight-color: transparent;

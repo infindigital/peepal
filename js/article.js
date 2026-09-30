@@ -3,19 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const pageUrl = window.location.href;
   const pageTitle = document.title;
 
-  // Live timestamp in the header, e.g. "Wed, 30 Sept, 2026 | 08.53pm IST"
+  // Live timestamp in the header (IST, Kannada)
   const timestamps = document.querySelectorAll('[data-live-time]');
   if (timestamps.length) {
-    const formatter = new Intl.DateTimeFormat('en-GB', {
-      timeZone: 'Asia/Kolkata',
-      weekday: 'short', day: 'numeric', month: 'short', year: 'numeric',
-      hour: '2-digit', minute: '2-digit', hour12: true,
-    });
     const updateTimestamp = () => {
-      const parts = Object.fromEntries(formatter.formatToParts(new Date()).map((p) => [p.type, p.value]));
-      const period = (parts.dayPeriod || '').toLowerCase();
-      const text = `${parts.weekday}, ${parts.day} ${parts.month}, ${parts.year} | ${parts.hour}.${parts.minute}${period} IST`;
-      timestamps.forEach((el) => { el.textContent = text; });
+      const now = new Date();
+      const tz = { timeZone: 'Asia/Kolkata' };
+      const date = now.toLocaleDateString('kn-IN', { ...tz, weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+      const time = now.toLocaleTimeString('kn-IN', { ...tz, hour: '2-digit', minute: '2-digit', hour12: true });
+      timestamps.forEach((el) => { el.textContent = `${date} | ${time} IST`; });
     };
     updateTimestamp();
     setInterval(updateTimestamp, 60 * 1000);
@@ -35,9 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyLink = async (button) => {
     try {
       await navigator.clipboard.writeText(pageUrl);
-      flash(button, 'Link copied');
+      flash(button, 'ಲಿಂಕ್ ನಕಲಿಸಲಾಗಿದೆ');
     } catch (err) {
-      window.prompt('Copy this link:', pageUrl);
+      window.prompt('ಈ ಲಿಂಕ್ ನಕಲಿಸಿ:', pageUrl);
     }
   };
   document.querySelectorAll('[data-share]').forEach((button) => {
@@ -116,12 +112,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Comment forms (moderated – no public posting yet)
+  // Comment forms (moderated - no public posting yet)
   document.querySelectorAll('[data-comment-form]').forEach((form) => {
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       const status = form.parentElement.querySelector('[data-comment-status]');
-      if (status) status.textContent = 'Thank you! Your comment has been submitted and is awaiting moderation.';
+      if (status) status.textContent = 'ಧನ್ಯವಾದಗಳು! ನಿಮ್ಮ ಅಭಿಪ್ರಾಯ ಸಲ್ಲಿಕೆಯಾಗಿದೆ, ಪರಿಶೀಲನೆಯ ಬಳಿಕ ಪ್ರಕಟವಾಗುತ್ತದೆ.';
       form.reset();
     });
   });
@@ -133,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
     menuToggle.addEventListener('click', () => {
       const open = menu.classList.toggle('hidden') === false;
       menuToggle.setAttribute('aria-expanded', String(open));
-      menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      menuToggle.setAttribute('aria-label', open ? 'ಮೆನು ಮುಚ್ಚಿ' : 'ಮೆನು ತೆರೆಯಿರಿ');
     });
   }
 
